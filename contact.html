@@ -39,24 +39,29 @@
     <div class="contact-form">
       <h2>Interested in discussing?</h2>
 
-      <form>
+      <form action="https://formsubmit.co/info@lmhicanada.org" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://lmhicanada.github.io/contact-success.html">
+      
         <label>Your Name*</label>
-        <input type="text" required>
-
+        <input type="text" name="name" required>
+      
         <label>Your Email Address*</label>
-        <input type="email" required>
-
+        <input type="email" name="email" required>
+      
         <label>Subject</label>
-        <input type="text">
-
+        <input type="text" name="subject">
+      
         <label>Phone</label>
-        <input type="text">
-
+        <input type="text" name="phone">
+      
         <label>Your Message*</label>
-        <textarea rows="6" required></textarea>
-
-        <button class="primary-btn">Send Message 🍁</button>
+        <textarea name="message" rows="6" required></textarea>
+      
+        <button class="primary-btn">Send Message</button>
       </form>
+
     </div>
 
     <!-- Contact Info -->
@@ -71,7 +76,6 @@
       <p><strong>Contact Number:</strong><br>00-90-530-0398386</p>
 
       <p><strong>Email:</strong><br>
-      secretary@ligamedicorum.org<br>
       info@ligamedicorum.org</p>
     </div>
 
