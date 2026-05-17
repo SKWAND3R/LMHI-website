@@ -2,38 +2,181 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LMHI India - Home</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>My Ministry-style Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>LMHI India</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Top language bar -->
+  <header class="top-bar">
+    <div class="container">
+      <div class="top-left">Government of Example</div>
+      <div class="top-right">
+        <button class="lang-btn">English</button>
+        <button class="lang-btn">हिन्दी</button>
+      </div>
+    </div>
   </header>
 
-  <section class="hero">
-    <h2>Welcome to the Homeopathic Congress of India</h2>
-    <p>Exploring collaboration, innovation, and holistic healing.</p>
-    <button id="learnMore">Learn More</button>
-  </section>
+  <!-- Main header with logo + nav -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="https://via.placeholder.com/60x60" alt="Logo" />
+        <div class="logo-text">
+          <h1>Ministry of Example Affairs</h1>
+          <p>Government of Example Country</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <button class="nav-toggle" id="navToggle">☰</button>
+        <ul id="navMenu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#schemes">Schemes</a></li>
+          <li><a href="#media">Media</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <section id="events">
-    <h2>Upcoming Events</h2>
-    <div class="card">
-      <h3>International Congress 2026</h3>
-      <p>Join us for the global conference on Homeopathy and integrative medicine.</p>
+  <!-- Hero / banner with slider -->
+  <section id="home" class="hero">
+    <div class="hero-slide active">
+      <div class="container">
+        <h2>Flagship Programme</h2>
+        <p>Short description of a key initiative, scheme, or mission.</p>
+        <button class="primary-btn">Learn More</button>
+      </div>
+    </div>
+    <div class="hero-slide">
+      <div class="container">
+        <h2>Citizen Services</h2>
+        <p>Access important services and information quickly and easily.</p>
+        <button class="primary-btn">View Services</button>
+      </div>
+    </div>
+    <div class="hero-controls">
+      <button class="hero-prev">‹</button>
+      <button class="hero-next">›</button>
     </div>
   </section>
 
-  <footer>
-    <p>© 2026 LMHI India | Designed by You</p>
+  <!-- Stats / counters -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div class="stat-card">
+        <h3 data-count="0" data-target="1430000" class="counter"></h3>
+        <p>Fuel Saved (Litres)</p>
+      </div>
+      <div class="stat-card">
+        <h3 data-count="0" data-target="10250000" class="counter"></h3>
+        <p>CO₂ Reduction (Kg)</p>
+      </div>
+      <div class="stat-card">
+        <h3 data-count="0" data-target="234" class="counter"></h3>
+        <p>Models Available</p>
+      </div>
+      <div class="stat-card">
+        <h3 data-count="0" data-target="1672000" class="counter"></h3>
+        <p>Vehicles Sold</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Announcements ticker -->
+  <section class="announcements">
+    <div class="container">
+      <h2>Announcements</h2>
+      <div class="ticker">
+        <div class="ticker-inner" id="tickerInner">
+          <span>Notice: New scheme guidelines released.</span>
+          <span>Update: Portal maintenance scheduled for Sunday.</span>
+          <span>Tender: Bids invited for infrastructure project.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About section -->
+  <section id="about" class="content-section">
+    <div class="container">
+      <h2>About the Ministry</h2>
+      <p>
+        This is a sample description of the ministry, its mandate, and its key
+        responsibilities. You can expand this with more detailed content,
+        subsections, and links.
+      </p>
+    </div>
+  </section>
+
+  <!-- Schemes / cards -->
+  <section id="schemes" class="content-section alt">
+    <div class="container">
+      <h2>Major Schemes & Programmes</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Scheme A</h3>
+          <p>Short description of Scheme A and its objectives.</p>
+          <a href="#" class="text-link">Read more →</a>
+        </article>
+        <article class="card">
+          <h3>Scheme B</h3>
+          <p>Short description of Scheme B and its objectives.</p>
+          <a href="#" class="text-link">Read more →</a>
+        </article>
+        <article class="card">
+          <h3>Scheme C</h3>
+          <p>Short description of Scheme C and its objectives.</p>
+          <a href="#" class="text-link">Read more →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Media section -->
+  <section id="media" class="content-section">
+    <div class="container">
+      <h2>Media & Publications</h2>
+      <ul class="link-list">
+        <li><a href="#">Press Releases</a></li>
+        <li><a href="#">Tenders</a></li>
+        <li><a href="#">Reports & Documents</a></li>
+        <li><a href="#">Photo Gallery</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact / footer -->
+  <footer id="contact" class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Contact Us</h3>
+        <p>
+          Room No. 123, Example Bhawan,<br />
+          Example Marg, New Delhi - 110011<br />
+          Email: example@nic.in
+        </p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul class="link-list">
+          <li><a href="#">RTI</a></li>
+          <li><a href="#">Citizen Charter</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Visitor Info</h3>
+        <p>Total Visitors: <span id="visitorCount">2,320,582</span></p>
+        <p>Last Updated: 16/05/2026</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Ministry of Example Affairs. All rights reserved.
+    </div>
   </footer>
 
   <script src="script.js"></script>
