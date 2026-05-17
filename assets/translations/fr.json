@@ -62,4 +62,20 @@
   "visitor_title": "Informations visiteurs",
   "visitor_total": "Total des visiteurs :",
   "visitor_updated": "Dernière mise à jour :"
+
+  "info_history": "Histoire",
+  "info_history_text": "L’homéopathie a été introduite au Canada au XIXe siècle par des médecins européens et des immigrants. Au fil du temps, elle a gagné en reconnaissance grâce aux praticiens dévoués, aux établissements d’enseignement et à l’intérêt croissant du public pour la médecine holistique.",
+
+  "info_education": "Éducation Homéopathique",
+  "info_education_text": "Le Canada compte plusieurs écoles et programmes accrédités en homéopathie. Ces institutions offrent une formation structurée en homéopathie classique, pratique clinique, matière médicale et méthodologies de recherche.",
+
+  "info_legislation": "Contrôle des Médicaments & Législation sur la Sécurité",
+  "info_legislation_text": "Les médicaments homéopathiques au Canada sont réglementés par Santé Canada dans le cadre du Règlement sur les produits de santé naturels. Ces normes garantissent la sécurité, la qualité et les bonnes pratiques de fabrication.",
+
+  "info_practice": "Popularité & Pratique Clinique",
+  "info_practice_text": "L’homéopathie est largement pratiquée au Canada par des professionnels agréés. De nombreux Canadiens recherchent des soins homéopathiques comme approche complémentaire ou alternative à la médecine conventionnelle.",
+
+  "info_research": "Recherche & Développement",
+  "info_research_text": "Les chercheurs et institutions canadiennes contribuent à la recherche homéopathique mondiale, explorant les résultats cliniques, l’efficacité des remèdes et les modèles de soins intégratifs."
+
 }
