@@ -474,12 +474,3 @@ body {
     grid-template-columns: 1fr;
   }
 }
-
-.contact-form h2::after,
-.contact-info h2::after {
-  content: " 🍁";
-  color: var(--primary);
-}
-
-
-
