@@ -436,6 +436,31 @@ body {
   padding: 60px 0;
 }
 
+.lang-switch {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.lang-btn {
+  padding: 8px 16px;
+  background: var(--primary);
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: 0.2s ease;
+}
+
+.lang-btn:hover {
+  background: var(--primary-dark);
+}
+
+.lang-btn.active {
+  background: var(--accent);
+  font-weight: bold;
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
