@@ -315,6 +315,27 @@ body {
   }
 }
 
+/* Fix LMHI section clipping */
+.info-content {
+  align-items: stretch;
+}
+
+.info-text-scroll {
+  max-height: 480px;   /* or higher */
+  min-height: 480px;
+  overflow-y: auto;
+}
+
+/* Prevent mobile menu from wrapping */
+@media (max-width: 768px) {
+  .info-menu {
+    white-space: nowrap;
+  }
+  .info-menu li {
+    flex-shrink: 0;
+  }
+}
+
 /* ——— ANNOUNCEMENTS ——— */
 .ticker {
   margin-top: 1rem;
