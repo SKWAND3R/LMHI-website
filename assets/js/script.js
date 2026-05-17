@@ -1,7 +1,8 @@
 let currentLanguage = "en";
 
-// ——— LOAD LANGUAGE FROM JSON ———
+/* ——— LOAD LANGUAGE FROM JSON ——— */
 async function loadLanguage(lang) {
+  currentLanguage = lang;
   const response = await fetch(`assets/translations/${lang}.json`);
   const translations = await response.json();
 
@@ -13,20 +14,17 @@ async function loadLanguage(lang) {
   });
 }
 
-// Language switch buttons
+/* ——— LANGUAGE SWITCH BUTTONS ——— */
 document.querySelectorAll(".lang-btn").forEach(btn => {
   btn.addEventListener("click", () => {
-  currentLanguage = btn.dataset.lang;
-  loadLanguage(currentLanguage);
-});
-
+    loadLanguage(btn.dataset.lang);
   });
 });
 
-// Load English by default
+/* Load English by default */
 loadLanguage("en");
 
-// ——— MOBILE NAV ———
+/* ——— MOBILE NAV ——— */
 const navToggle = document.getElementById("navToggle");
 const navMenu = document.getElementById("navMenu");
 
@@ -34,7 +32,7 @@ navToggle.addEventListener("click", () => {
   navMenu.classList.toggle("open");
 });
 
-// ——— HERO SLIDER ———
+/* ——— HERO SLIDER ——— */
 const slides = document.querySelectorAll(".hero-slide");
 const prevBtn = document.querySelector(".hero-prev");
 const nextBtn = document.querySelector(".hero-next");
@@ -58,28 +56,7 @@ prevBtn.addEventListener("click", prevSlideFn);
 nextBtn.addEventListener("click", nextSlide);
 setInterval(nextSlide, 8000);
 
-// Interactable LMHI Info Section
-const menuItems = document.querySelectorAll(".info-menu li");
-const infoTitle = document.getElementById("info-title");
-const infoText = document.getElementById("info-text");
-
-menuItems.forEach(item => {
-  item.addEventListener("click", () => {
-    // highlight active item
-    menuItems.forEach(i => i.classList.remove("active"));
-    item.classList.add("active");
-
-    // update content using translation keys
-    const section = item.dataset.section;
-    infoTitle.setAttribute("data-i18n", `info_${section}`);
-    infoText.setAttribute("data-i18n", `info_${section}_text`);
-
-    // reload language to update text
-    loadLanguage(currentLanguage);
-  });
-});
-
-// ——— COUNTERS ———
+/* ——— COUNTERS ——— */
 const counters = document.querySelectorAll(".counter");
 let countersStarted = false;
 
@@ -115,3 +92,49 @@ function onScroll() {
 
 window.addEventListener("scroll", onScroll);
 window.addEventListener("load", onScroll);
+
+/* ——— INTERACTABLE LMHI INFO SECTION ——— */
+const menuItems = document.querySelectorAll(".info-menu li");
+const infoTitle = document.getElementById("info-title");
+const infoText = document.getElementById("info-text");
+const infoImg = document.getElementById("info-img");
+
+const infoImages = {
+  history: "assets/images/info/history.jpg",
+  education: "assets/images/info/education.jpg",
+  legislation: "assets/images/info/legislation.jpg",
+  practice: "assets/images/info/practice.jpg",
+  research: "assets/images/info/research.jpg"
+};
+
+menuItems.forEach(item => {
+  item.addEventListener("click", () => {
+
+    /* Highlight active item */
+    menuItems.forEach(i => i.classList.remove("active"));
+    item.classList.add("active");
+
+    const section = item.dataset.section;
+
+    /* Update translation keys */
+    infoTitle.setAttribute("data-i18n", `info_${section}`);
+    infoText.setAttribute("data-i18n", `info_${section}_text`);
+    infoImg.src = infoImages[section];
+
+    /* Reload language */
+    loadLanguage(currentLanguage);
+
+    /* ——— FADE-IN ANIMATION ——— */
+    infoTitle.classList.remove("fade");
+    infoText.classList.remove("fade");
+    infoImg.classList.remove("fade");
+
+    void infoTitle.offsetWidth;
+    void infoText.offsetWidth;
+    void infoImg.offsetWidth;
+
+    infoTitle.classList.add("fade");
+    infoText.classList.add("fade");
+    infoImg.classList.add("fade");
+  });
+});
