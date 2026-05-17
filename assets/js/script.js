@@ -96,7 +96,8 @@ window.addEventListener("load", onScroll);
 /* ——— INTERACTABLE LMHI INFO SECTION ——— */
 const menuItems = document.querySelectorAll(".info-menu li");
 const infoTitle = document.getElementById("info-title");
-const infoText = document.getElementById("info-text");
+const infoText1 = document.getElementById("info-text-1");
+const infoText2 = document.getElementById("info-text-2");
 const infoImg = document.getElementById("info-img");
 
 const infoImages = {
@@ -118,7 +119,8 @@ menuItems.forEach(item => {
 
     /* Update translation keys */
     infoTitle.setAttribute("data-i18n", `info_${section}`);
-    infoText.setAttribute("data-i18n", `info_${section}_text`);
+    infoText1.setAttribute("data-i18n", `info_${section}_text`);
+    infoText2.setAttribute("data-i18n", `info_${section}_text2`);
     infoImg.src = infoImages[section];
 
     /* Reload language */
@@ -126,15 +128,18 @@ menuItems.forEach(item => {
 
     /* ——— FADE-IN ANIMATION ——— */
     infoTitle.classList.remove("fade");
-    infoText.classList.remove("fade");
+    infoText1.classList.remove("fade");
+    infoText2.classList.remove("fade");
     infoImg.classList.remove("fade");
 
     void infoTitle.offsetWidth;
-    void infoText.offsetWidth;
+    void infoText1.offsetWidth;
+    void infoText2.offsetWidth;
     void infoImg.offsetWidth;
 
     infoTitle.classList.add("fade");
-    infoText.classList.add("fade");
+    infoText1.classList.add("fade");
+    infoText2.classList.add("fade");
     infoImg.classList.add("fade");
   });
 });
