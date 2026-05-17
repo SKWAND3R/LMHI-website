@@ -371,3 +371,29 @@ body {
   }
   .nav ul.open { display: flex; }
 }
+
+/* Auto-hide empty paragraph 2 */
+#info-text-2:empty {
+  display: none;
+}
+
+/* Smooth height animation for the whole text block */
+.info-content > div {
+  transition: height 0.35s ease;
+  overflow: hidden;
+}
+
+/* Fade-in stays the same */
+.fade {
+  opacity: 0;
+  transform: translateY(6px);
+  animation: fadeIn 0.35s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
