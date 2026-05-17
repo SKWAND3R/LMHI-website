@@ -1,3 +1,4 @@
+/* ——— ROOT ——— */
 :root {
   --primary: #004b8d;
   --primary-dark: #00325f;
@@ -21,20 +22,19 @@
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
+  font-family: system-ui, sans-serif;
   color: var(--text-main);
   background: #fff;
 }
 
-/* Layout helpers */
+/* ——— LAYOUT ——— */
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-/* Top bar */
+/* ——— TOP BAR ——— */
 .top-bar {
   background: var(--primary-dark);
   color: #fff;
@@ -44,7 +44,6 @@ body {
 .top-bar .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 0.35rem 1rem;
 }
 
@@ -56,10 +55,9 @@ body {
   margin-left: 0.5rem;
   border-radius: 2px;
   cursor: pointer;
-  font-size: 0.8rem;
 }
 
-/* Main header */
+/* ——— HEADER ——— */
 .main-header {
   background: #fff;
   border-bottom: 1px solid var(--border);
@@ -70,7 +68,6 @@ body {
 
 .header-inner {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   padding: 0.75rem 1rem;
 }
@@ -85,106 +82,57 @@ body {
   border-radius: 50%;
 }
 
-.logo-text h1 {
-  font-size: 1.1rem;
-  margin: 0;
-}
-
-.logo-text p {
-  margin: 0;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
-
-/* Nav */
-.nav {
-  position: relative;
-}
-
+/* ——— NAV ——— */
 .nav-toggle {
   display: none;
   background: none;
   border: none;
   font-size: 1.5rem;
-  cursor: pointer;
 }
 
 .nav ul {
-  list-style: none;
   display: flex;
   gap: 1rem;
-  margin: 0;
-  padding: 0;
+  list-style: none;
 }
 
 .nav a {
   text-decoration: none;
   color: var(--text-main);
-  font-size: 0.9rem;
-  padding: 0.25rem 0;
+  padding-bottom: 0.25rem;
   border-bottom: 2px solid transparent;
-  transition: border-color var(--transition);
 }
 
 .nav a:hover {
   border-color: var(--primary);
 }
 
-/* Hero */
+/* ——— HERO ——— */
 .hero {
-  position: relative;
   background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   color: #fff;
-  overflow: hidden;
+  padding: 3rem 0;
+  position: relative;
 }
 
 .hero-slide {
   display: none;
-  padding: 3rem 0;
 }
 
 .hero-slide.active {
   display: block;
 }
 
-.hero h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.hero p {
-  max-width: 500px;
-  font-size: 1rem;
-}
-
 .primary-btn {
   margin-top: 1rem;
   background: var(--accent);
   border: none;
-  color: #000;
   padding: 0.6rem 1.2rem;
   border-radius: var(--radius);
   cursor: pointer;
-  font-weight: 600;
 }
 
-.hero-controls {
-  position: absolute;
-  right: 1rem;
-  bottom: 1rem;
-}
-
-.hero-controls button {
-  background: rgba(0, 0, 0, 0.3);
-  border: none;
-  color: #fff;
-  margin-left: 0.25rem;
-  padding: 0.3rem 0.6rem;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-/* Stats */
+/* ——— STATS ——— */
 .stats {
   background: var(--bg-light);
   padding: 2rem 0;
@@ -198,39 +146,17 @@ body {
 
 .stat-card {
   background: #fff;
-  border-radius: var(--radius);
   padding: 1rem;
-  box-shadow: var(--shadow-soft);
-  text-align: center;
-}
-
-.stat-card h3 {
-  margin: 0;
-  font-size: 1.4rem;
-  color: var(--primary-dark);
-}
-
-.stat-card p {
-  margin: 0.4rem 0 0;
-  font-size: 0.9rem;
-  color: var(--text-muted);
-}
-
-/* Announcements */
-.announcements {
-  padding: 2rem 0;
-}
-
-.announcements h2 {
-  margin-top: 0;
-}
-
-.ticker {
-  margin-top: 0.75rem;
-  border: 1px solid var(--border);
   border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+}
+
+/* ——— ANNOUNCEMENTS ——— */
+.ticker {
+  margin-top: 1rem;
+  border: 1px solid var(--border);
   overflow: hidden;
-  background: #fff;
 }
 
 .ticker-inner {
@@ -240,22 +166,16 @@ body {
 }
 
 .ticker-inner span {
-  display: inline-block;
   padding: 0.5rem 1.5rem;
-  border-right: 1px solid var(--border);
-  font-size: 0.9rem;
+  display: inline-block;
 }
 
 @keyframes ticker {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-/* Content sections */
+/* ——— CONTENT ——— */
 .content-section {
   padding: 2.5rem 0;
 }
@@ -264,59 +184,20 @@ body {
   background: var(--bg-light);
 }
 
-.content-section h2 {
-  margin-top: 0;
-}
-
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
-  margin-top: 1rem;
 }
 
 .card {
   background: #fff;
-  border-radius: var(--radius);
   padding: 1rem;
+  border-radius: var(--radius);
   box-shadow: var(--shadow-soft);
 }
 
-.card h3 {
-  margin-top: 0;
-}
-
-.text-link {
-  color: var(--primary);
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.text-link:hover {
-  text-decoration: underline;
-}
-
-.link-list {
-  list-style: none;
-  padding: 0;
-  margin: 0.5rem 0 0;
-}
-
-.link-list li {
-  margin-bottom: 0.3rem;
-}
-
-.link-list a {
-  text-decoration: none;
-  color: var(--primary-dark);
-  font-size: 0.9rem;
-}
-
-.link-list a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
+/* ——— FOOTER ——— */
 .footer {
   background: #111827;
   color: #e5e7eb;
@@ -329,50 +210,24 @@ body {
   gap: 1.5rem;
 }
 
-.footer h3 {
-  margin-top: 0;
-  font-size: 1rem;
-}
-
-.footer p,
-.footer li {
-  font-size: 0.85rem;
-  color: #d1d5db;
-}
-
 .footer-bottom {
   border-top: 1px solid #374151;
-  margin-top: 1.5rem;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem;
   text-align: center;
-  font-size: 0.8rem;
-  color: #9ca3af;
 }
 
-/* Responsive nav */
+/* ——— RESPONSIVE ——— */
 @media (max-width: 768px) {
-  .header-inner {
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-
-  .nav-toggle {
-    display: block;
-  }
-
+  .nav-toggle { display: block; }
   .nav ul {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    padding: 1rem;
     position: absolute;
     right: 0;
     top: 100%;
-    background: #fff;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.5rem 1rem;
     box-shadow: var(--shadow-soft);
-    display: none;
   }
-
-  .nav ul.open {
-    display: flex;
-  }
+  .nav ul.open { display: flex; }
 }
