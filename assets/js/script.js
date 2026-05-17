@@ -1,30 +1,49 @@
+/* -------------------------------------------------
+   LANGUAGE LOADING
+------------------------------------------------- */
 let currentLanguage = "en";
 
-/* ——— LOAD LANGUAGE FROM JSON ——— */
 async function loadLanguage(lang) {
   currentLanguage = lang;
-  const response = await fetch(`assets/translations/${lang}.json`);
-  const translations = await response.json();
 
-  document.querySelectorAll("[data-i18n]").forEach(el => {
-    const key = el.getAttribute("data-i18n");
-    if (translations[key]) {
-      el.textContent = translations[key];
+  try {
+    const response = await fetch(`assets/translations/${lang}.json`);
+    const translations = await response.json();
+
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (translations[key] !== undefined) {
+        el.textContent = translations[key];
+      }
+    });
+
+    // Auto-hide paragraph 2 if empty
+    const p2 = document.getElementById("info-text-2");
+    if (p2 && p2.textContent.trim() === "") {
+      p2.style.display = "none";
+    } else if (p2) {
+      p2.style.display = "block";
     }
-  });
+
+  } catch (err) {
+    console.error("Translation load error:", err);
+  }
 }
 
-/* ——— LANGUAGE SWITCH BUTTONS ——— */
+window.addEventListener("DOMContentLoaded", () => {
+  loadLanguage("en");
+});
+
 document.querySelectorAll(".lang-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     loadLanguage(btn.dataset.lang);
   });
 });
 
-/* Load English by default */
-loadLanguage("en");
 
-/* ——— MOBILE NAV ——— */
+/* -------------------------------------------------
+   MOBILE NAV
+------------------------------------------------- */
 const navToggle = document.getElementById("navToggle");
 const navMenu = document.getElementById("navMenu");
 
@@ -32,7 +51,10 @@ navToggle.addEventListener("click", () => {
   navMenu.classList.toggle("open");
 });
 
-/* ——— HERO SLIDER ——— */
+
+/* -------------------------------------------------
+   HERO SLIDER
+------------------------------------------------- */
 const slides = document.querySelectorAll(".hero-slide");
 const prevBtn = document.querySelector(".hero-prev");
 const nextBtn = document.querySelector(".hero-next");
@@ -56,7 +78,10 @@ prevBtn.addEventListener("click", prevSlideFn);
 nextBtn.addEventListener("click", nextSlide);
 setInterval(nextSlide, 8000);
 
-/* ——— COUNTERS ——— */
+
+/* -------------------------------------------------
+   COUNTERS
+------------------------------------------------- */
 const counters = document.querySelectorAll(".counter");
 let countersStarted = false;
 
@@ -93,12 +118,18 @@ function onScroll() {
 window.addEventListener("scroll", onScroll);
 window.addEventListener("load", onScroll);
 
-/* ——— INTERACTABLE LMHI INFO SECTION ——— */
+
+/* -------------------------------------------------
+   INTERACTABLE LMHI INFO SECTION
+------------------------------------------------- */
 const menuItems = document.querySelectorAll(".info-menu li");
 const infoTitle = document.getElementById("info-title");
 const infoText1 = document.getElementById("info-text-1");
 const infoText2 = document.getElementById("info-text-2");
 const infoImg = document.getElementById("info-img");
+
+// Wrapper for height animation
+const infoTextWrapper = infoText1.parentElement;
 
 const infoImages = {
   history: "assets/images/info/history.jpg",
@@ -111,7 +142,7 @@ const infoImages = {
 menuItems.forEach(item => {
   item.addEventListener("click", () => {
 
-    /* Highlight active item */
+    /* Highlight active */
     menuItems.forEach(i => i.classList.remove("active"));
     item.classList.add("active");
 
@@ -126,7 +157,9 @@ menuItems.forEach(item => {
     /* Reload language */
     loadLanguage(currentLanguage);
 
-    /* ——— FADE-IN ANIMATION ——— */
+    /* ---------------------------
+       FADE-IN ANIMATION
+    ----------------------------*/
     infoTitle.classList.remove("fade");
     infoText1.classList.remove("fade");
     infoText2.classList.remove("fade");
@@ -141,5 +174,13 @@ menuItems.forEach(item => {
     infoText1.classList.add("fade");
     infoText2.classList.add("fade");
     infoImg.classList.add("fade");
+
+    /* ---------------------------
+       SMOOTH HEIGHT ANIMATION
+    ----------------------------*/
+    setTimeout(() => {
+      const newHeight = infoTextWrapper.scrollHeight;
+      infoTextWrapper.style.height = newHeight + "px";
+    }, 10);
   });
 });
