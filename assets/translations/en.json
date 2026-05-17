@@ -82,4 +82,24 @@
   "visitor_title": "Visitor Info",
   "visitor_total": "Total Visitors:",
   "visitor_updated": "Last Updated:"
+
+  "contact_page_title": "Contact – LMHI Canada",
+  "contact_form_title": "Interested in discussing?",
+  "contact_name": "Your Name*",
+  "contact_email": "Your Email Address*",
+  "contact_subject": "Subject",
+  "contact_phone": "Phone",
+  "contact_message": "Your Message*",
+  "contact_send": "Send Message 🍁",
+  
+  "contact_info_title": "Get in touch with us",
+  "contact_seat_title": "Seat",
+  "contact_seat_text": "Wall Str 45, Köthen, Germany",
+  "contact_address_title": "Correspondence Address",
+  "contact_address_text": "1400 Sk. Baysak 1 Ishani N:9/3 Alsancak-Izmir / Turkey",
+  "contact_phone_title": "Contact Number",
+  "contact_phone_text": "00-90-530-0398386",
+  "contact_email_title": "Email Address",
+  "contact_email_text1": "secretary@ligamedicorum.org",
+  "contact_email_text2": "info@ligamedicorum.org"
 }
