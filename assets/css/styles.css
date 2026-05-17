@@ -1,12 +1,12 @@
 /* ——— ROOT ——— */
 :root {
-  --primary: #FF0000;        /* Canada flag red */
-  --primary-dark: #B30000;   /* Deep red for contrast */
-  --accent: #FF4D4D;         /* Light red highlight */
-  --bg-light: #FFF5F5;       /* Very soft red background */
+  --primary: #FF0000;
+  --primary-dark: #B30000;
+  --accent: #FF4D4D;
+  --bg-light: #FFF5F5;
   --text-main: #222;
   --text-muted: #555;
-  --border: #FFCCCC;         /* Soft red border */
+  --border: #FFCCCC;
   --white: #fff;
   --max-width: 1100px;
   --shadow-soft: 0 2px 6px rgba(0, 0, 0, 0.08);
@@ -61,7 +61,7 @@ body {
 .main-header {
   background: #fff;
   border-bottom: 1px solid var(--border);
-  position: relative; /* or remove entirely */
+  position: relative;
   z-index: 10;
 }
 
@@ -131,7 +131,7 @@ body {
   cursor: pointer;
 }
 
-/* LMHI Intro Section */
+/* ——— LMHI INTRO ——— */
 .lmhi-intro {
   padding: 3rem 0;
   text-align: center;
@@ -194,7 +194,7 @@ body {
   box-shadow: var(--shadow-soft);
 }
 
-/* ——— INTERACTABLE INFO SECTION ——— */
+/* ——— INTERACTIVE LMHI SECTION ——— */
 .lmhi-info {
   padding: 3rem 0;
 }
@@ -236,17 +236,23 @@ body {
   display: grid;
   grid-template-columns: 1fr 360px;
   gap: 2rem;
-  align-items: flex-start;
+  align-items: stretch;
 }
 
 /* Scrollable text container */
 .info-text-scroll {
-  max-height: 360px;
-  min-height: 360px;
+  max-height: 520px;
+  min-height: 520px;
   overflow-y: auto;
   padding-right: 12px;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+}
+
+/* Remove clipping */
+.info-content > div {
+  overflow: visible !important;
+  height: auto !important;
 }
 
 /* Text styling */
@@ -290,7 +296,7 @@ body {
   }
 }
 
-/* Responsive */
+/* Responsive LMHI */
 @media (max-width: 900px) {
   .info-content {
     grid-template-columns: 1fr;
@@ -307,32 +313,12 @@ body {
     border-bottom: 2px solid #eee;
     display: flex;
     overflow-x: auto;
-  }
-
-  .info-menu li {
-    white-space: nowrap;
-    padding: 0.8rem 1rem;
-  }
-}
-
-/* Fix LMHI section clipping */
-.info-content {
-  align-items: stretch;
-}
-
-.info-text-scroll {
-  max-height: 480px;   /* or higher */
-  min-height: 480px;
-  overflow-y: auto;
-}
-
-/* Prevent mobile menu from wrapping */
-@media (max-width: 768px) {
-  .info-menu {
     white-space: nowrap;
   }
+
   .info-menu li {
     flex-shrink: 0;
+    padding: 0.8rem 1rem;
   }
 }
 
@@ -421,66 +407,9 @@ body {
   .nav ul.open { display: flex; }
 }
 
-/* Auto-hide empty paragraph 2 */
-#info-text-2:empty {
-  display: none;
-}
-
-/* Smooth height animation for the whole text block */
-.info-content > div {
-  transition: height 0.35s ease;
-  overflow: hidden;
-}
-
-/* Fade-in stays the same */
-.fade {
-  opacity: 0;
-  transform: translateY(6px);
-  animation: fadeIn 0.35s ease forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Smooth scroll momentum */
-.info-text-scroll {
-  overflow-y: auto;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-}
-
-/* Contact Page Layout */
+/* ——— CONTACT PAGE ——— */
 .contact-page {
   padding: 60px 0;
-}
-
-.lang-switch {
-  display: flex;
-  gap: 10px;
-  margin: 20px 0;
-}
-
-.lang-btn {
-  padding: 8px 16px;
-  background: var(--primary);
-  color: white;
-  border-radius: 4px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: 0.2s ease;
-}
-
-.lang-btn:hover {
-  background: var(--primary-dark);
-}
-
-.lang-btn.active {
-  background: var(--accent);
-  font-weight: bold;
 }
 
 .contact-grid {
@@ -510,11 +439,6 @@ body {
   font-size: 1rem;
 }
 
-.contact-info p {
-  margin-bottom: 16px;
-  line-height: 1.5;
-}
-
 .contact-item {
   display: flex;
   align-items: flex-start;
@@ -528,13 +452,13 @@ body {
   margin-top: 4px;
 }
 
-/* Mobile */
 @media (max-width: 768px) {
   .contact-grid {
     grid-template-columns: 1fr;
   }
 }
 
+/* ——— ANIMATIONS ——— */
 @keyframes pop {
   0% { transform: scale(0.6); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
@@ -543,4 +467,3 @@ body {
 .content-section h2 {
   animation: pop 0.4s ease-out;
 }
-
