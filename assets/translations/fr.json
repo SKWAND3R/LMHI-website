@@ -1,1 +1,60 @@
+{
+  "topbar_title": "LMHI Canada – Liga Medicorum Homoeopathica Internationalis",
 
+  "header_title": "LMHI Canada",
+  "header_subtitle": "Liga Medicorum Homoeopathica Internationalis – Section Canada",
+
+  "nav_home": "Accueil",
+  "nav_about": "À propos",
+  "nav_membership": "Adhésion",
+  "nav_events": "Événements",
+  "nav_contact": "Contact",
+
+  "hero1_title": "LMHI Canada",
+  "hero1_text": "Promouvoir l'excellence en médecine homéopathique à travers le Canada.",
+  "hero1_btn": "En savoir plus",
+
+  "hero2_title": "Collaboration Internationale",
+  "hero2_text": "Relier les praticiens canadiens à la LMHI dans le monde entier.",
+  "hero2_btn": "Adhérez",
+
+  "stat_members": "Membres Canadiens",
+  "stat_years": "Années de la LMHI",
+  "stat_events": "Événements Annuels",
+  "stat_countries": "Pays Partenaires",
+
+  "announcements_title": "Annonces",
+  "ann1": "Congrès annuel de la LMHI Canada – Inscriptions ouvertes",
+  "ann2": "Nouvelles ressources en langue française disponibles",
+  "ann3": "Appel à communications : Recherche en homéopathie 2026",
+
+  "about_title": "À propos de la LMHI Canada",
+  "about_text": "LMHI Canada représente la section canadienne de la Liga Medicorum Homoeopathica Internationalis, dédiée à l'avancement de l'éducation, de la recherche et des normes professionnelles en homéopathie au Canada.",
+
+  "membership_title": "Adhésion",
+  "member_pro": "Membre Professionnel",
+  "member_pro_text": "Pour les praticiens agréés en médecine homéopathique.",
+  "member_student": "Membre Étudiant",
+  "member_student_text": "Pour les étudiants inscrits dans des programmes accrédités d'homéopathie.",
+  "member_international": "Membre International",
+  "member_international_text": "Pour les membres de la LMHI résidant hors du Canada.",
+  "apply": "Postuler →",
+
+  "events_title": "Événements",
+  "event1": "Congrès annuel de la LMHI Canada",
+  "event2": "Symposium de recherche",
+  "event3": "Conférence internationale de la LMHI",
+
+  "contact_title": "Contactez la LMHI Canada",
+  "contact_text": "Secrétariat de la LMHI Canada\nToronto, Ontario, Canada\nCourriel : info@lmhicanada.org",
+
+  "quicklinks_title": "Liens rapides",
+  "ql_membership": "Adhésion",
+  "ql_events": "Événements",
+  "ql_research": "Recherche",
+  "ql_privacy": "Politique de confidentialité",
+
+  "visitor_title": "Informations visiteurs",
+  "visitor_total": "Total des visiteurs :",
+  "visitor_updated": "Dernière mise à jour :"
+}
