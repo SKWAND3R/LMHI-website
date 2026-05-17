@@ -53,6 +53,27 @@ prevBtn.addEventListener("click", prevSlideFn);
 nextBtn.addEventListener("click", nextSlide);
 setInterval(nextSlide, 8000);
 
+// Interactable LMHI Info Section
+const menuItems = document.querySelectorAll(".info-menu li");
+const infoTitle = document.getElementById("info-title");
+const infoText = document.getElementById("info-text");
+
+menuItems.forEach(item => {
+  item.addEventListener("click", () => {
+    // highlight active item
+    menuItems.forEach(i => i.classList.remove("active"));
+    item.classList.add("active");
+
+    // update content using translation keys
+    const section = item.dataset.section;
+    infoTitle.setAttribute("data-i18n", `info_${section}`);
+    infoText.setAttribute("data-i18n", `info_${section}_text`);
+
+    // reload language to update text
+    loadLanguage(currentLanguage);
+  });
+});
+
 // ——— COUNTERS ———
 const counters = document.querySelectorAll(".counter");
 let countersStarted = false;
