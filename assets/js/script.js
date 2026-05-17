@@ -118,6 +118,29 @@ function onScroll() {
 window.addEventListener("scroll", onScroll);
 window.addEventListener("load", onScroll);
 
+/* Calculate LMHI years since Sept 10, 1975 */
+function calculateLMHIYears() {
+  const startDate = new Date("1975-09-10");
+  const today = new Date();
+
+  let years = today.getFullYear() - startDate.getFullYear();
+
+  // Adjust if today's date is before Sept 10 this year
+  const hasHadAnniversary =
+    today.getMonth() > 8 || (today.getMonth() === 8 && today.getDate() >= 10);
+
+  if (!hasHadAnniversary) {
+    years -= 1;
+  }
+
+  return years;
+}
+
+/* Apply dynamic value to the counter */
+const lmhiYearsElement = document.getElementById("lmhi-years");
+if (lmhiYearsElement) {
+  lmhiYearsElement.dataset.target = calculateLMHIYears();
+}
 
 /* -------------------------------------------------
    INTERACTABLE LMHI INFO SECTION
