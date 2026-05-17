@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Contact – LMHI Canada</title>
+  <title data-i18n="contact_page_title">Contact – LMHI Canada</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -15,19 +15,19 @@
     <div class="logo">
       <img src="assets/images/logo.png" width="100" height="100" />
       <div class="logo-text">
-        <h1>LMHI Canada</h1>
-        <p>Liga Medicorum Homoeopathica Internationalis – Canada Section</p>
+        <h1 data-i18n="header_title">LMHI Canada</h1>
+        <p data-i18n="header_subtitle">Liga Medicorum Homoeopathica Internationalis – Canada Section</p>
       </div>
     </div>
 
     <nav class="nav">
       <button class="nav-toggle" id="navToggle">☰</button>
       <ul id="navMenu">
-        <li><a href="index.html#home">Home</a></li>
-        <li><a href="index.html#about">About Us</a></li>
-        <li><a href="index.html#membership">Membership</a></li>
-        <li><a href="index.html#events">Events</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="index.html#home" data-i18n="nav_home">Home</a></li>
+        <li><a href="index.html#about" data-i18n="nav_about">About Us</a></li>
+        <li><a href="index.html#membership" data-i18n="nav_membership">Membership</a></li>
+        <li><a href="index.html#events" data-i18n="nav_events">Events</a></li>
+        <li><a href="contact.html" class="active" data-i18n="nav_contact">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -38,68 +38,69 @@
 
     <!-- Contact Form -->
     <div class="contact-form">
-      <h2>Interested in discussing?</h2>
+      <h2 data-i18n="contact_form_title">Interested in discussing?</h2>
 
       <form action="https://formsubmit.co/info@lmhicanada.org" method="POST">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_next" value="https://lmhicanada.github.io/contact-success.html">
-      
-        <label>Your Name*</label>
-        <input type="text" name="name" required>
-      
-        <label>Your Email Address*</label>
-        <input type="email" name="email" required>
-      
-        <label>Subject</label>
-        <input type="text" name="subject">
-      
-        <label>Phone</label>
-        <input type="text" name="phone">
-      
-        <label>Your Message*</label>
-        <textarea name="message" rows="6" required></textarea>
-      
-        <button class="primary-btn">Send Message</button>
-      </form>
 
+        <label data-i18n="contact_name">Your Name*</label>
+        <input type="text" name="name" required>
+
+        <label data-i18n="contact_email">Your Email Address*</label>
+        <input type="email" name="email" required>
+
+        <label data-i18n="contact_subject">Subject</label>
+        <input type="text" name="subject">
+
+        <label data-i18n="contact_phone">Phone</label>
+        <input type="text" name="phone">
+
+        <label data-i18n="contact_message">Your Message*</label>
+        <textarea name="message" rows="6" required></textarea>
+
+        <button class="primary-btn" data-i18n="contact_send">Send Message 🍁</button>
+      </form>
     </div>
 
     <!-- Contact Info -->
-        <div class="contact-info">
-      <h2>Get in touch with us</h2>
-    
+    <div class="contact-info">
+      <h2 data-i18n="contact_info_title">Get in touch with us</h2>
+
       <div class="contact-item">
         <i class="fa-solid fa-globe"></i>
         <div>
-          <strong>Seat</strong><br>
-          Wall Str 45, Köthen, Germany
+          <strong data-i18n="contact_seat_title">Seat</strong><br>
+          <span data-i18n="contact_seat_text">Wall Str 45, Köthen, Germany</span>
         </div>
       </div>
-    
+
       <div class="contact-item">
         <i class="fa-solid fa-map-location-dot"></i>
         <div>
-          <strong>Correspondence Address</strong><br>
-          1400 Sk. Baysak 1 Ishani N:9/3 Alsancak-Izmir / Turkey
+          <strong data-i18n="contact_address_title">Correspondence Address</strong><br>
+          <span data-i18n="contact_address_text">1400 Sk. Baysak 1 Ishani N:9/3 Alsancak-Izmir / Turkey</span>
         </div>
       </div>
-    
+
       <div class="contact-item">
         <i class="fa-solid fa-phone"></i>
         <div>
-          <strong>Contact Number</strong><br>
-          00-90-530-0398386
+          <strong data-i18n="contact_phone_title">Contact Number</strong><br>
+          <span data-i18n="contact_phone_text">00-90-530-0398386</span>
         </div>
       </div>
-    
+
       <div class="contact-item">
         <i class="fa-solid fa-envelope"></i>
         <div>
-          <strong>Email Address</strong><br>
-          info@ligamedicorum.org
+          <strong data-i18n="contact_email_title">Email Address</strong><br>
+          <span data-i18n="contact_email_text1">secretary@ligamedicorum.org</span><br>
+          <span data-i18n="contact_email_text2">info@ligamedicorum.org</span>
         </div>
       </div>
+
     </div>
 
   </div>
