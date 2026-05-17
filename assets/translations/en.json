@@ -62,4 +62,20 @@
   "visitor_title": "Visitor Info",
   "visitor_total": "Total Visitors:",
   "visitor_updated": "Last Updated:"
+
+  "info_history": "History",
+  "info_history_text": "Homeopathy was introduced to Canada in the 19th century by European physicians and immigrants. Over time, it gained recognition through dedicated practitioners, educational institutions, and the growing interest of the public in holistic medicine.",
+
+  "info_education": "Homeopathic Education",
+  "info_education_text": "Canada has a number of accredited homeopathic schools and training programs. These institutions provide structured education in classical homeopathy, clinical practice, materia medica, and research methodologies.",
+
+  "info_legislation": "Drug Control & Safety Legislation",
+  "info_legislation_text": "Homeopathic medicines in Canada are regulated by Health Canada under the Natural Health Products Regulations. These standards ensure safety, quality, and proper manufacturing practices for all homeopathic remedies sold in the country.",
+
+  "info_practice": "Popularity & Clinical Practice",
+  "info_practice_text": "Homeopathy is widely practiced across Canada by licensed professionals. Many Canadians seek homeopathic care as a complementary or alternative approach to conventional medicine.",
+
+  "info_research": "Research & Development",
+  "info_research_text": "Canadian researchers and institutions contribute to global homeopathic research, exploring clinical outcomes, remedy effectiveness, and integrative healthcare models."
+
 }
