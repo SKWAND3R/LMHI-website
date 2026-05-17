@@ -61,8 +61,7 @@ body {
 .main-header {
   background: #fff;
   border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
+  position: relative; /* or remove entirely */
   z-index: 10;
 }
 
