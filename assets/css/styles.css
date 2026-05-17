@@ -1,0 +1,233 @@
+/* ——— ROOT ——— */
+:root {
+  --primary: #004b8d;
+  --primary-dark: #00325f;
+  --accent: #f9a825;
+  --bg-light: #f5f7fa;
+  --text-main: #222;
+  --text-muted: #666;
+  --border: #ddd;
+  --white: #fff;
+  --max-width: 1100px;
+  --shadow-soft: 0 2px 6px rgba(0, 0, 0, 0.08);
+  --radius: 4px;
+  --transition: 0.2s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: var(--text-main);
+  background: #fff;
+}
+
+/* ——— LAYOUT ——— */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ——— TOP BAR ——— */
+.top-bar {
+  background: var(--primary-dark);
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.35rem 1rem;
+}
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 0.15rem 0.5rem;
+  margin-left: 0.5rem;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+/* ——— HEADER ——— */
+.main-header {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo img {
+  border-radius: 50%;
+}
+
+/* ——— NAV ——— */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text-main);
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid transparent;
+}
+
+.nav a:hover {
+  border-color: var(--primary);
+}
+
+/* ——— HERO ——— */
+.hero {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  padding: 3rem 0;
+  position: relative;
+}
+
+.hero-slide {
+  display: none;
+}
+
+.hero-slide.active {
+  display: block;
+}
+
+.primary-btn {
+  margin-top: 1rem;
+  background: var(--accent);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+/* ——— STATS ——— */
+.stats {
+  background: var(--bg-light);
+  padding: 2rem 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.stat-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+}
+
+/* ——— ANNOUNCEMENTS ——— */
+.ticker {
+  margin-top: 1rem;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.ticker-inner {
+  display: inline-block;
+  white-space: nowrap;
+  animation: ticker 15s linear infinite;
+}
+
+.ticker-inner span {
+  padding: 0.5rem 1.5rem;
+  display: inline-block;
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ——— CONTENT ——— */
+.content-section {
+  padding: 2.5rem 0;
+}
+
+.content-section.alt {
+  background: var(--bg-light);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+/* ——— FOOTER ——— */
+.footer {
+  background: #111827;
+  color: #e5e7eb;
+  padding-top: 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid #374151;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+/* ——— RESPONSIVE ——— */
+@media (max-width: 768px) {
+  .nav-toggle { display: block; }
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    box-shadow: var(--shadow-soft);
+  }
+  .nav ul.open { display: flex; }
+}
