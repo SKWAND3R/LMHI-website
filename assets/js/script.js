@@ -175,22 +175,5 @@ menuItems.forEach(item => {
     infoText2.classList.add("fade");
     infoImg.classList.add("fade");
 
-    /* ---------------------------
-       SMOOTH HEIGHT ANIMATION (CONSISTENT)
-    ----------------------------*/
-
-    // Step 1: Reset height to auto to measure natural height
-    infoTextWrapper.style.height = "auto";
-
-    // Step 2: Measure new height
-    const newHeight = infoTextWrapper.scrollHeight;
-
-    // Step 3: Set height to 0 first (forces animation on shrink)
-    infoTextWrapper.style.height = "0px";
-
-    // Step 4: Animate to new height
-    requestAnimationFrame(() => {
-      infoTextWrapper.style.height = newHeight + "px";
-    });
   });
 });
