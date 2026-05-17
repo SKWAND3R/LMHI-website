@@ -1,7 +1,7 @@
 {
-  "topbar_title": "LMHI Canada – Liga Medicorum Homoeopathica Internationalis",
+  "topbar_title": "LMHI Canada Chapter – Liga Medicorum Homoeopathica Internationalis",
 
-  "header_title": "LMHI Canada",
+  "header_title": "LMHI Canada Chapter",
   "header_subtitle": "Liga Medicorum Homoeopathica Internationalis – Section Canada",
 
   "nav_home": "Accueil",
@@ -10,7 +10,7 @@
   "nav_events": "Événements",
   "nav_contact": "Contact",
 
-  "hero1_title": "LMHI Canada",
+  "hero1_title": "LMHI Canada Chapter",
   "hero1_text": "Promouvoir l’excellence en médecine homéopathique à travers le Canada.",
   "hero1_btn": "En savoir plus",
 
@@ -53,8 +53,8 @@
   "ann2": "Nouvelles ressources en français disponibles",
   "ann3": "Appel à communications : Recherche en homéopathie 2026",
 
-  "about_title": "À propos de LMHI Canada",
-  "about_text": "LMHI Canada représente la section canadienne de la Liga Medicorum Homoeopathica Internationalis, dédiée à l’avancement de l’éducation, de la recherche et des normes professionnelles en homéopathie au Canada.",
+  "about_title": "À propos de LMHI Canada Chapter",
+  "about_text": "LMHI Canada Chapter représente la section canadienne de la Liga Medicorum Homoeopathica Internationalis, dédiée à l’avancement de l’éducation, de la recherche et des normes professionnelles en homéopathie au Canada.",
 
   "membership_title": "Adhésion",
   "member_pro": "Membre Professionnel",
@@ -66,12 +66,12 @@
   "apply": "Postuler →",
 
   "events_title": "Événements",
-  "event1": "Congrès annuel LMHI Canada",
+  "event1": "Congrès annuel LMHI Canada Chapter",
   "event2": "Symposium de recherche",
   "event3": "Conférence internationale LMHI",
 
-  "contact_title": "Contact LMHI Canada",
-  "contact_text": "Secrétariat LMHI Canada\nToronto, Ontario, Canada\nCourriel : info@lmhicanada.org",
+  "contact_title": "Contact LMHI Canada Chapter",
+  "contact_text": "Secrétariat LMHI Canada Chapter\nEtobicoke, Ontario, Canada\nCourriel : lmhitoronto@gmail.com",
 
   "quicklinks_title": "Liens rapides",
   "ql_membership": "Adhésion",
@@ -83,7 +83,7 @@
   "visitor_total": "Total des visiteurs :",
   "visitor_updated": "Dernière mise à jour :",
 
-  "contact_page_title": "Contact – LMHI Canada",
+  "contact_page_title": "Contact – LMHI Canada Chapter",
   "contact_form_title": "Intéressé à discuter?",
   "contact_name": "Votre nom*",
   "contact_email": "Votre adresse courriel*",
@@ -94,12 +94,11 @@
 
   "contact_info_title": "Contactez-nous",
   "contact_seat_title": "Siège",
-  "contact_seat_text": "Wall Str 45, Köthen, Allemagne",
+  "contact_seat_text": "LMHI CANADA CHAPTER",
   "contact_address_title": "Adresse de correspondance",
-  "contact_address_text": "1400 Sk. Baysak 1 Ishani N:9/3 Alsancak-Izmir / Turquie",
+  "contact_address_text": "2649, Islington Avenue, Etobicoke, Ontario, M9V2X6, Canada",
   "contact_phone_title": "Numéro de contact",
-  "contact_phone_text": "00-90-530-0398386",
+  "contact_phone_text": "TBD",
   "contact_email_title": "Adresse courriel",
-  "contact_email_text1": "secretary@ligamedicorum.org",
-  "contact_email_text2": "info@ligamedicorum.org"
+  "contact_email_text1": "lmhitoronto@gmail.com",
 }
