@@ -18,15 +18,30 @@
   "hero2_text": "Connecting Canadian practitioners with LMHI worldwide.",
   "hero2_btn": "Join Us",
 
+  "chapter_welcome": "CANADA CHAPTER WELCOMES YOU",
+  "lmhi_title": "Liga Medicorum Homoeopathica Internationalis (LMHI)",
+  "lmhi_sub": "It has always been an endeavour of LMHI to promote the best of homoeopathic practices across the globe through interaction and sharing of knowledge.",
+  "lmhi_body": "The international homeopathic medical society Liga Medicorum Homoeopathica Internationalis (LMHI), established in Rotterdam in 1925, represents homeopathic physicians in more than 70 countries worldwide. The purpose of the association is the development and safeguarding of homeopathy globally, and the creation of a link among licensed homeopaths, medical diploma holders, societies, and individuals interested in homeopathy.",
+
   "stat_members": "Canadian Members",
   "stat_years": "Years of LMHI Worldwide",
   "stat_events": "Annual Events",
   "stat_countries": "Partner Countries",
 
-  "chapter_welcome": "CANADA CHAPTER WELCOMES YOU",
-  "lmhi_title": "Liga Medicorum Homoeopathica Internationalis (LMHI)",
-  "lmhi_sub": "It has always been an endeavour of LMHI to promote the best of homoeopathic practices across the globe through interaction and sharing of knowledge.",
-  "lmhi_body": "The international homeopathic medical society Liga Medicorum Homoeopathica Internationalis (LMHI), established in Rotterdam in 1925, represents homeopathic physicians in more than 70 countries worldwide. The purpose of the association is the development and safeguarding of homeopathy globally, and the creation of a link among licensed homeopaths, medical diploma holders, societies, and individuals interested in homeopathy."
+  "info_history": "History",
+  "info_history_text": "Homeopathy was introduced to Canada in the 19th century by European physicians and immigrants. Over time, it gained recognition through dedicated practitioners, educational institutions, and the growing interest of the public in holistic medicine.",
+
+  "info_education": "Homeopathic Education",
+  "info_education_text": "Canada has a number of accredited homeopathic schools and training programs. These institutions provide structured education in classical homeopathy, clinical practice, materia medica, and research methodologies.",
+
+  "info_legislation": "Drug Control & Safety Legislation",
+  "info_legislation_text": "Homeopathic medicines in Canada are regulated by Health Canada under the Natural Health Products Regulations. These standards ensure safety, quality, and proper manufacturing practices for all homeopathic remedies sold in the country.",
+
+  "info_practice": "Popularity & Clinical Practice",
+  "info_practice_text": "Homeopathy is widely practiced across Canada by licensed professionals. Many Canadians seek homeopathic care as a complementary or alternative approach to conventional medicine.",
+
+  "info_research": "Research & Development",
+  "info_research_text": "Canadian researchers and institutions contribute to global homeopathic research, exploring clinical outcomes, remedy effectiveness, and integrative healthcare models.",
 
   "announcements_title": "Announcements",
   "ann1": "LMHI Canada Annual Congress – Registration Open",
@@ -62,20 +77,4 @@
   "visitor_title": "Visitor Info",
   "visitor_total": "Total Visitors:",
   "visitor_updated": "Last Updated:"
-
-  "info_history": "History",
-  "info_history_text": "Homeopathy was introduced to Canada in the 19th century by European physicians and immigrants. Over time, it gained recognition through dedicated practitioners, educational institutions, and the growing interest of the public in holistic medicine.",
-
-  "info_education": "Homeopathic Education",
-  "info_education_text": "Canada has a number of accredited homeopathic schools and training programs. These institutions provide structured education in classical homeopathy, clinical practice, materia medica, and research methodologies.",
-
-  "info_legislation": "Drug Control & Safety Legislation",
-  "info_legislation_text": "Homeopathic medicines in Canada are regulated by Health Canada under the Natural Health Products Regulations. These standards ensure safety, quality, and proper manufacturing practices for all homeopathic remedies sold in the country.",
-
-  "info_practice": "Popularity & Clinical Practice",
-  "info_practice_text": "Homeopathy is widely practiced across Canada by licensed professionals. Many Canadians seek homeopathic care as a complementary or alternative approach to conventional medicine.",
-
-  "info_research": "Research & Development",
-  "info_research_text": "Canadian researchers and institutions contribute to global homeopathic research, exploring clinical outcomes, remedy effectiveness, and integrative healthcare models."
-
 }
