@@ -242,6 +242,25 @@ body {
   color: #333;
 }
 
+/* Right-side image inside interactable section */
+.info-content {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.info-image {
+  width: 100%;
+}
+
+.info-image img {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  object-fit: cover;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .info-grid {
