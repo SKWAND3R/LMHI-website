@@ -1,3 +1,5 @@
+let currentLanguage = "en";
+
 // ——— LOAD LANGUAGE FROM JSON ———
 async function loadLanguage(lang) {
   const response = await fetch(`assets/translations/${lang}.json`);
@@ -14,7 +16,10 @@ async function loadLanguage(lang) {
 // Language switch buttons
 document.querySelectorAll(".lang-btn").forEach(btn => {
   btn.addEventListener("click", () => {
-    loadLanguage(btn.dataset.lang);
+  currentLanguage = btn.dataset.lang;
+  loadLanguage(currentLanguage);
+});
+
   });
 });
 
