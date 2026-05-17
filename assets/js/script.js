@@ -120,7 +120,7 @@ window.addEventListener("load", onScroll);
 
 /* Calculate LMHI years since Sept 10, 1975 */
 function calculateLMHIYears() {
-  const startDate = new Date("1975-09-10");
+  const startDate = new Date("1925-09-10");
   const today = new Date();
 
   let years = today.getFullYear() - startDate.getFullYear();
