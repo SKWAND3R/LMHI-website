@@ -132,6 +132,49 @@ body {
   cursor: pointer;
 }
 
+/* LMHI Intro Section */
+.lmhi-intro {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.chapter-welcome {
+  background: #f9a825; /* LMHI gold */
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.2rem;
+}
+
+.chapter-welcome p {
+  margin: 0;
+  font-weight: 600;
+  color: #000;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+}
+
+.lmhi-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #004b8d;
+  margin: 0.5rem 0 1rem;
+}
+
+.lmhi-sub {
+  font-style: italic;
+  color: #444;
+  max-width: 700px;
+  margin: 0.5rem auto 1.5rem;
+}
+
+.lmhi-body {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: #333;
+  line-height: 1.6;
+}
+
 /* ——— STATS ——— */
 .stats {
   background: var(--bg-light);
