@@ -8,12 +8,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<script>
-  setTimeout(() => {
-    window.location.href = "index.html";
-  }, 5000);
-</script>
-  
 <body>
 
 <!-- Top language bar -->
@@ -69,12 +63,16 @@
       Votre message a été envoyé avec succès!
     </h2>
 
-    <p style="font-size:1.1rem; color:#444; max-width:600px; margin:0 auto 30px;">
-      Merci de nous avoir contactés.  
+    <p style="font-size:1.1rem; color:#444; max-width:600px; margin:0 auto 20px;">
+      Merci de nous avoir contactés.<br>
       Notre équipe vous répondra dans les plus brefs délais.
     </p>
 
-    <a href="index.html" class="primary-btn" style="font-size:1rem;">
+    <p id="redirect-msg" style="margin-top:10px; color:#666;">
+      Redirection dans <span id="count">5</span> secondes...
+    </p>
+
+    <a href="index.html" class="primary-btn" style="font-size:1rem; margin-top:20px;">
       Retour à l’accueil
     </a>
 
@@ -86,6 +84,22 @@
     © 2026 LMHI Canada – Tous droits réservés. 🍁
   </div>
 </footer>
+
+<!-- Redirect Timer -->
+<script>
+  let timeLeft = 5;
+  const counter = document.getElementById("count");
+
+  const timer = setInterval(() => {
+    timeLeft--;
+    counter.textContent = timeLeft;
+
+    if (timeLeft <= 0) {
+      clearInterval(timer);
+      window.location.href = "index.html";
+    }
+  }, 1000);
+</script>
 
 <script src="assets/js/script.js"></script>
 </body>
