@@ -1,12 +1,12 @@
 /* ——— ROOT ——— */
 :root {
-  --primary: #004b8d;
-  --primary-dark: #00325f;
-  --accent: #f9a825;
-  --bg-light: #f5f7fa;
+  --primary: #FF0000;        /* Canada flag red */
+  --primary-dark: #B30000;   /* Deep red for contrast */
+  --accent: #FF4D4D;         /* Light red highlight */
+  --bg-light: #FFF5F5;       /* Very soft red background */
   --text-main: #222;
-  --text-muted: #666;
-  --border: #ddd;
+  --text-muted: #555;
+  --border: #FFCCCC;         /* Soft red border */
   --white: #fff;
   --max-width: 1100px;
   --shadow-soft: 0 2px 6px rgba(0, 0, 0, 0.08);
@@ -396,4 +396,10 @@ body {
     transform: translateY(0);
   }
 }
+
+.footer-bottom::before {
+  content: "🍁 ";
+  color: var(--accent);
+}
+
 
