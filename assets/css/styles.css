@@ -276,6 +276,15 @@ body {
     white-space: nowrap;
     padding: 0.8rem 1rem;
   }
+  .info-content {
+  grid-template-columns: 1fr;
+}
+
+.info-image img {
+  max-width: 100%;
+  margin-top: 1rem;
+}
+
 }
 
 /* ——— ANNOUNCEMENTS ——— */
