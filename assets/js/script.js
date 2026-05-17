@@ -143,16 +143,17 @@ if (lmhiYearsElement) {
 }
 
 /* -------------------------------------------------
-   INTERACTABLE LMHI INFO SECTION
+   INTERACTABLE LMHI INFO SECTION (FIXED)
 ------------------------------------------------- */
+
 const menuItems = document.querySelectorAll(".info-menu li");
 const infoTitle = document.getElementById("info-title");
 const infoText1 = document.getElementById("info-text-1");
 const infoText2 = document.getElementById("info-text-2");
 const infoImg = document.getElementById("info-img");
 
-// Wrapper for height animation
-const infoTextWrapper = infoText1.parentElement;
+/* NEW: Correct scroll container */
+const infoTextWrapper = document.querySelector(".info-text-scroll");
 
 const infoImages = {
   history: "assets/images/info/history.jpg",
@@ -175,28 +176,26 @@ menuItems.forEach(item => {
     infoTitle.setAttribute("data-i18n", `info_${section}`);
     infoText1.setAttribute("data-i18n", `info_${section}_text`);
     infoText2.setAttribute("data-i18n", `info_${section}_text2`);
+
+    /* Update image */
     infoImg.src = infoImages[section];
 
     /* Reload language */
     loadLanguage(currentLanguage);
 
+    /* Reset scroll to top */
+    infoTextWrapper.scrollTop = 0;
+
     /* ---------------------------
        FADE-IN ANIMATION
     ----------------------------*/
-    infoTitle.classList.remove("fade");
-    infoText1.classList.remove("fade");
-    infoText2.classList.remove("fade");
+    infoTextWrapper.classList.remove("fade");
     infoImg.classList.remove("fade");
 
-    void infoTitle.offsetWidth;
-    void infoText1.offsetWidth;
-    void infoText2.offsetWidth;
+    void infoTextWrapper.offsetWidth;
     void infoImg.offsetWidth;
 
-    infoTitle.classList.add("fade");
-    infoText1.classList.add("fade");
-    infoText2.classList.add("fade");
+    infoTextWrapper.classList.add("fade");
     infoImg.classList.add("fade");
-
   });
 });
