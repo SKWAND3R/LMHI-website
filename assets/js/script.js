@@ -1,95 +1,91 @@
-// ——— LANGUAGE DATA ———
-const translations = {
-  en: {
-    topbar_title: "LMHI Canada – International Homeopathic Medical League",
-    header_title: "LMHI Canada",
-    header_subtitle: "International Homeopathic Medical League – Canada Section",
+// ——— LOAD LANGUAGE FROM JSON ———
+async function loadLanguage(lang) {
+  const response = await fetch(`assets/translations/${lang}.json`);
+  const translations = await response.json();
 
-    nav_home: "Home",
-    nav_about: "About Us",
-    nav_membership: "Membership",
-    nav_events: "Events",
-    nav_contact: "Contact",
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[key]) {
+      el.textContent = translations[key];
+    }
+  });
+}
 
-    hero1_title: "LMHI Canada",
-    hero1_text: "Promoting excellence in homeopathic medicine across Canada.",
-    hero1_btn: "Learn More",
+// Language switch buttons
+document.querySelectorAll(".lang-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    loadLanguage(btn.dataset.lang);
+  });
+});
 
-    hero2_title: "International Collaboration",
-    hero2_text: "Connecting Canadian practitioners with LMHI worldwide.",
-    hero2_btn: "Join Us",
+// Load English by default
+loadLanguage("en");
 
-    stat_members: "Canadian Members",
-    stat_years: "Years of LMHI Worldwide",
-    stat_events: "Annual Events",
-    stat_countries: "Partner Countries",
+// ——— MOBILE NAV ———
+const navToggle = document.getElementById("navToggle");
+const navMenu = document.getElementById("navMenu");
 
-    announcements_title: "Announcements",
-    ann1: "LMHI Canada Annual Congress – Registration Open",
-    ann2: "New French-language resources available",
-    ann3: "Call for papers: Homeopathy Research 2026",
+navToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("open");
+});
 
-    about_title: "About LMHI Canada",
-    about_text:
-      "LMHI Canada represents the Canadian section of the International Homeopathic Medical League, dedicated to advancing homeopathic education, research, and professional standards across Canada.",
+// ——— HERO SLIDER ———
+const slides = document.querySelectorAll(".hero-slide");
+const prevBtn = document.querySelector(".hero-prev");
+const nextBtn = document.querySelector(".hero-next");
+let currentSlide = 0;
 
-    membership_title: "Membership",
-    member_pro: "Professional Member",
-    member_pro_text: "For licensed practitioners of homeopathic medicine.",
-    member_student: "Student Member",
-    member_student_text:
-      "For students enrolled in accredited homeopathy programs.",
-    member_international: "International Member",
-    member_international_text:
-      "For LMHI members residing outside Canada.",
-    apply: "Apply →",
+function showSlide(index) {
+  slides.forEach((s, i) => s.classList.toggle("active", i === index));
+}
 
-    events_title: "Events",
-    event1: "Annual LMHI Canada Congress",
-    event2: "Research Symposium",
-    event3: "International LMHI Conference",
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
 
-    contact_title: "Contact LMHI Canada",
-    contact_text:
-      "LMHI Canada Secretariat\nToronto, Ontario, Canada\nEmail: info@lmhicanada.org",
+function prevSlideFn() {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  showSlide(currentSlide);
+}
 
-    quicklinks_title: "Quick Links",
-    ql_membership: "Membership",
-    ql_events: "Events",
-    ql_research: "Research",
-    ql_privacy: "Privacy Policy",
+prevBtn.addEventListener("click", prevSlideFn);
+nextBtn.addEventListener("click", nextSlide);
+setInterval(nextSlide, 8000);
 
-    visitor_title: "Visitor Info",
-    visitor_total: "Total Visitors:",
-    visitor_updated: "Last Updated:",
-  },
+// ——— COUNTERS ———
+const counters = document.querySelectorAll(".counter");
+let countersStarted = false;
 
-  fr: {
-    topbar_title: "LMHI Canada – Ligue Médicale Homéopathique Internationale",
-    header_title: "LMHI Canada",
-    header_subtitle:
-      "Ligue Médicale Homéopathique Internationale – Section Canada",
+function animateCounters() {
+  counters.forEach(counter => {
+    const target = +counter.dataset.target;
+    const step = Math.max(1, Math.floor(target / 200));
 
-    nav_home: "Accueil",
-    nav_about: "À propos",
-    nav_membership: "Adhésion",
-    nav_events: "Événements",
-    nav_contact: "Contact",
+    function update() {
+      let current = +counter.innerText.replace(/,/g, "") || 0;
+      if (current < target) {
+        current += step;
+        if (current > target) current = target;
+        counter.innerText = current.toLocaleString();
+        requestAnimationFrame(update);
+      }
+    }
+    update();
+  });
+}
 
-    hero1_title: "LMHI Canada",
-    hero1_text:
-      "Promouvoir l'excellence en médecine homéopathique à travers le Canada.",
-    hero1_btn: "En savoir plus",
+function onScroll() {
+  const statsSection = document.querySelector(".stats");
+  if (!statsSection || countersStarted) return;
 
-    hero2_title: "Collaboration Internationale",
-    hero2_text:
-      "Relier les praticiens canadiens à la LMHI dans le monde entier.",
-    hero2_btn: "Adhérez",
+  const rect = statsSection.getBoundingClientRect();
+  if (rect.top < window.innerHeight && rect.bottom >= 0) {
+    countersStarted = true;
+    animateCounters();
+    window.removeEventListener("scroll", onScroll);
+  }
+}
 
-    stat_members: "Membres Canadiens",
-    stat_years: "Années de la LMHI",
-    stat_events: "Événements Annuels",
-    stat_countries: "Pays Partenaires",
-
-    announcements_title: "Annonces",
-    ann1: "Congrès
+window.addEventListener("scroll", onScroll);
+window.addEventListener("load", onScroll);
