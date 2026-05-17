@@ -468,6 +468,19 @@ body {
   line-height: 1.5;
 }
 
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.contact-item i {
+  font-size: 1.6rem;
+  color: var(--primary);
+  margin-top: 4px;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
   .contact-grid {
