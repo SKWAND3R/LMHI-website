@@ -29,25 +29,25 @@
   "stat_countries": "Pays partenaires",
 
   "info_history": "Histoire",
-  "info_history_text": "L’homéopathie est arrivée en Ontario au début du XIXe siècle grâce à des médecins européens et des colons. Elle s’est rapidement développée en raison de son approche thérapeutique plus douce que la médecine conventionnelle de l’époque. En 1859, la province a officiellement reconnu l’homéopathie par l’Act Respecting Homeopathy, accordant un statut légal et un système de licences aux homéopathes. Pendant plus d’un siècle, les médecins homéopathes ont été réglementés par le College of Physicians and Surgeons of Ontario, et la province comptait même des hôpitaux homéopathiques dédiés. Des figures marquantes comme la Dre Emily Stowe, première femme médecin au Canada, ont contribué à façonner le développement précoce de la profession. Bien que la présence institutionnelle de l’homéopathie ait diminué au milieu du XXe siècle, elle a retrouvé un statut réglementaire officiel le 1er avril 2015 avec la création du College of Homeopaths of Ontario. Aujourd’hui, l’homéopathie continue d’être pratiquée dans toute la province selon des normes d’éducation et de délivrance de permis uniformisées.",
-  "info_history_text2": "Des figures marquantes comme la Dre Emily Stowe, première femme médecin au Canada, ont contribué à façonner le développement précoce de la profession. Bien que la présence institutionnelle de l’homéopathie ait diminué au milieu du XXe siècle, elle a retrouvé un statut réglementaire officiel le 1er avril 2015 avec la création du College of Homeopaths of Ontario. Aujourd’hui, l’homéopathie continue d’être pratiquée dans toute la province selon des normes d’éducation et de délivrance de permis uniformisées."
+  "info_history_text": "L’homéopathie est arrivée en Ontario au début du XIXe siècle grâce à des médecins européens et des colons. Elle s’est rapidement développée en raison de son approche thérapeutique plus douce que la médecine conventionnelle de l’époque. En 1859, la province a officiellement reconnu l’homéopathie par l’Act Respecting Homeopathy, accordant un statut légal et un système de licences aux homéopathes. Pendant plus d’un siècle, les médecins homéopathes ont été réglementés par le College of Physicians and Surgeons of Ontario, et la province comptait même des hôpitaux homéopathiques dédiés.",
+  "info_history_text2": "Des figures marquantes comme la Dre Emily Stowe, première femme médecin au Canada, ont contribué à façonner le développement précoce de la profession. Bien que la présence institutionnelle de l’homéopathie ait diminué au milieu du XXe siècle, elle a retrouvé un statut réglementaire officiel le 1er avril 2015 avec la création du College of Homeopaths of Ontario. Aujourd’hui, l’homéopathie continue d’être pratiquée dans toute la province selon des normes d’éducation et de délivrance de permis uniformisées.",
 
   "info_education": "Éducation Homéopathique",
   "info_education_text": "Le Canada compte plusieurs écoles et programmes accrédités en homéopathie. Ces institutions offrent une formation structurée en homéopathie classique, pratique clinique, matière médicale et méthodologies de recherche.",
   "info_education_text2": "",
-  
+
   "info_legislation": "Contrôle des Médicaments & Législation sur la Sécurité",
   "info_legislation_text": "Les médicaments homéopathiques au Canada sont réglementés par Santé Canada dans le cadre du Règlement sur les produits de santé naturels. Ces normes garantissent la sécurité, la qualité et les bonnes pratiques de fabrication.",
   "info_legislation_text2": "",
-  
+
   "info_practice": "Popularité & Pratique Clinique",
   "info_practice_text": "L’homéopathie est largement pratiquée au Canada par des professionnels agréés. De nombreux Canadiens recherchent des soins homéopathiques comme approche complémentaire ou alternative à la médecine conventionnelle.",
   "info_practice_text2": "",
-  
+
   "info_research": "Recherche & Développement",
   "info_research_text": "Les chercheurs et institutions canadiennes contribuent à la recherche homéopathique mondiale, explorant les résultats cliniques, l’efficacité des remèdes et les modèles de soins intégratifs.",
-  "info_research_text2": ""
-  
+  "info_research_text2": "",
+
   "announcements_title": "Annonces",
   "ann1": "Congrès annuel LMHI Canada – Inscriptions ouvertes",
   "ann2": "Nouvelles ressources en français disponibles",
