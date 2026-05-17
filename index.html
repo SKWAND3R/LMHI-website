@@ -2,180 +2,203 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>My Ministry-style Site</title>
+  <title>LMHI Canada – Ligue Médicale Homéopathique Internationale</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <!-- Top language bar -->
   <header class="top-bar">
     <div class="container">
-      <div class="top-left">Government of Example</div>
+      <div class="top-left" data-i18n="topbar_title">
+        LMHI Canada – Ligue Médicale Homéopathique Internationale
+      </div>
       <div class="top-right">
-        <button class="lang-btn">English</button>
-        <button class="lang-btn">हिन्दी</button>
+        <button class="lang-btn" data-lang="en">English</button>
+        <button class="lang-btn" data-lang="fr">Français</button>
       </div>
     </div>
   </header>
 
-  <!-- Main header with logo + nav -->
+  <!-- Main header -->
   <header class="main-header">
     <div class="container header-inner">
       <div class="logo">
-        <img src="https://via.placeholder.com/60x60" alt="Logo" />
+        <img src="https://via.placeholder.com/60x60" alt="LMHI Canada Logo" />
         <div class="logo-text">
-          <h1>Ministry of Example Affairs</h1>
-          <p>Government of Example Country</p>
+          <h1 data-i18n="header_title">LMHI Canada</h1>
+          <p data-i18n="header_subtitle">
+            Ligue Médicale Homéopathique Internationale – Section Canada
+          </p>
         </div>
       </div>
+
       <nav class="nav">
         <button class="nav-toggle" id="navToggle">☰</button>
         <ul id="navMenu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#schemes">Schemes</a></li>
-          <li><a href="#media">Media</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#home" data-i18n="nav_home">Home</a></li>
+          <li><a href="#about" data-i18n="nav_about">About Us</a></li>
+          <li><a href="#membership" data-i18n="nav_membership">Membership</a></li>
+          <li><a href="#events" data-i18n="nav_events">Events</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Hero / banner with slider -->
+  <!-- Hero -->
   <section id="home" class="hero">
     <div class="hero-slide active">
       <div class="container">
-        <h2>Flagship Programme</h2>
-        <p>Short description of a key initiative, scheme, or mission.</p>
-        <button class="primary-btn">Learn More</button>
+        <h2 data-i18n="hero1_title">LMHI Canada</h2>
+        <p data-i18n="hero1_text">
+          Promoting excellence in homeopathic medicine across Canada.
+        </p>
+        <button class="primary-btn" data-i18n="hero1_btn">Learn More</button>
       </div>
     </div>
+
     <div class="hero-slide">
       <div class="container">
-        <h2>Citizen Services</h2>
-        <p>Access important services and information quickly and easily.</p>
-        <button class="primary-btn">View Services</button>
+        <h2 data-i18n="hero2_title">International Collaboration</h2>
+        <p data-i18n="hero2_text">
+          Connecting Canadian practitioners with LMHI worldwide.
+        </p>
+        <button class="primary-btn" data-i18n="hero2_btn">Join Us</button>
       </div>
     </div>
+
     <div class="hero-controls">
       <button class="hero-prev">‹</button>
       <button class="hero-next">›</button>
     </div>
   </section>
 
-  <!-- Stats / counters -->
+  <!-- Stats -->
   <section class="stats">
     <div class="container stats-grid">
       <div class="stat-card">
-        <h3 data-count="0" data-target="1430000" class="counter"></h3>
-        <p>Fuel Saved (Litres)</p>
+        <h3 class="counter" data-target="1500">0</h3>
+        <p data-i18n="stat_members">Canadian Members</p>
       </div>
       <div class="stat-card">
-        <h3 data-count="0" data-target="10250000" class="counter"></h3>
-        <p>CO₂ Reduction (Kg)</p>
+        <h3 class="counter" data-target="76">0</h3>
+        <p data-i18n="stat_years">Years of LMHI Worldwide</p>
       </div>
       <div class="stat-card">
-        <h3 data-count="0" data-target="234" class="counter"></h3>
-        <p>Models Available</p>
+        <h3 class="counter" data-target="12">0</h3>
+        <p data-i18n="stat_events">Annual Events</p>
       </div>
       <div class="stat-card">
-        <h3 data-count="0" data-target="1672000" class="counter"></h3>
-        <p>Vehicles Sold</p>
+        <h3 class="counter" data-target="25">0</h3>
+        <p data-i18n="stat_countries">Partner Countries</p>
       </div>
     </div>
   </section>
 
-  <!-- Announcements ticker -->
+  <!-- Announcements -->
   <section class="announcements">
     <div class="container">
-      <h2>Announcements</h2>
+      <h2 data-i18n="announcements_title">Announcements</h2>
       <div class="ticker">
-        <div class="ticker-inner" id="tickerInner">
-          <span>Notice: New scheme guidelines released.</span>
-          <span>Update: Portal maintenance scheduled for Sunday.</span>
-          <span>Tender: Bids invited for infrastructure project.</span>
+        <div class="ticker-inner">
+          <span data-i18n="ann1">LMHI Canada Annual Congress – Registration Open</span>
+          <span data-i18n="ann2">New French-language resources available</span>
+          <span data-i18n="ann3">Call for papers: Homeopathy Research 2026</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About section -->
+  <!-- About -->
   <section id="about" class="content-section">
     <div class="container">
-      <h2>About the Ministry</h2>
-      <p>
-        This is a sample description of the ministry, its mandate, and its key
-        responsibilities. You can expand this with more detailed content,
-        subsections, and links.
+      <h2 data-i18n="about_title">About LMHI Canada</h2>
+      <p data-i18n="about_text">
+        LMHI Canada represents the Canadian section of the Ligue Médicale
+        Homéopathique Internationale, dedicated to advancing homeopathic
+        education, research, and professional standards across Canada.
       </p>
     </div>
   </section>
 
-  <!-- Schemes / cards -->
-  <section id="schemes" class="content-section alt">
+  <!-- Membership -->
+  <section id="membership" class="content-section alt">
     <div class="container">
-      <h2>Major Schemes & Programmes</h2>
+      <h2 data-i18n="membership_title">Membership</h2>
+
       <div class="card-grid">
         <article class="card">
-          <h3>Scheme A</h3>
-          <p>Short description of Scheme A and its objectives.</p>
-          <a href="#" class="text-link">Read more →</a>
+          <h3 data-i18n="member_pro">Professional Member</h3>
+          <p data-i18n="member_pro_text">
+            For licensed practitioners of homeopathic medicine.
+          </p>
+          <a href="#" class="text-link" data-i18n="apply">Apply →</a>
         </article>
+
         <article class="card">
-          <h3>Scheme B</h3>
-          <p>Short description of Scheme B and its objectives.</p>
-          <a href="#" class="text-link">Read more →</a>
+          <h3 data-i18n="member_student">Student Member</h3>
+          <p data-i18n="member_student_text">
+            For students enrolled in accredited homeopathy programs.
+          </p>
+          <a href="#" class="text-link" data-i18n="apply">Apply →</a>
         </article>
+
         <article class="card">
-          <h3>Scheme C</h3>
-          <p>Short description of Scheme C and its objectives.</p>
-          <a href="#" class="text-link">Read more →</a>
+          <h3 data-i18n="member_international">International Member</h3>
+          <p data-i18n="member_international_text">
+            For LMHI members residing outside Canada.
+          </p>
+          <a href="#" class="text-link" data-i18n="apply">Apply →</a>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- Media section -->
-  <section id="media" class="content-section">
+  <!-- Events -->
+  <section id="events" class="content-section">
     <div class="container">
-      <h2>Media & Publications</h2>
+      <h2 data-i18n="events_title">Events</h2>
       <ul class="link-list">
-        <li><a href="#">Press Releases</a></li>
-        <li><a href="#">Tenders</a></li>
-        <li><a href="#">Reports & Documents</a></li>
-        <li><a href="#">Photo Gallery</a></li>
+        <li><a href="#" data-i18n="event1">Annual LMHI Canada Congress</a></li>
+        <li><a href="#" data-i18n="event2">Research Symposium</a></li>
+        <li><a href="#" data-i18n="event3">International LMHI Conference</a></li>
       </ul>
     </div>
   </section>
 
-  <!-- Contact / footer -->
+  <!-- Footer -->
   <footer id="contact" class="footer">
     <div class="container footer-grid">
       <div>
-        <h3>Contact Us</h3>
-        <p>
-          Room No. 123, Example Bhawan,<br />
-          Example Marg, New Delhi - 110011<br />
-          Email: example@nic.in
+        <h3 data-i18n="contact_title">Contact LMHI Canada</h3>
+        <p data-i18n="contact_text">
+          LMHI Canada Secretariat<br />
+          Toronto, Ontario, Canada<br />
+          Email: info@lmhicanada.org
         </p>
       </div>
+
       <div>
-        <h3>Quick Links</h3>
+        <h3 data-i18n="quicklinks_title">Quick Links</h3>
         <ul class="link-list">
-          <li><a href="#">RTI</a></li>
-          <li><a href="#">Citizen Charter</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
-          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#" data-i18n="ql_membership">Membership</a></li>
+          <li><a href="#" data-i18n="ql_events">Events</a></li>
+          <li><a href="#" data-i18n="ql_research">Research</a></li>
+          <li><a href="#" data-i18n="ql_privacy">Privacy Policy</a></li>
         </ul>
       </div>
+
       <div>
-        <h3>Visitor Info</h3>
-        <p>Total Visitors: <span id="visitorCount">2,320,582</span></p>
-        <p>Last Updated: 16/05/2026</p>
+        <h3 data-i18n="visitor_title">Visitor Info</h3>
+        <p><span data-i18n="visitor_total">Total Visitors:</span> 12,582</p>
+        <p><span data-i18n="visitor_updated">Last Updated:</span> 16/05/2026</p>
       </div>
     </div>
+
     <div class="footer-bottom">
-      © 2026 Ministry of Example Affairs. All rights reserved.
+      © 2026 LMHI Canada – All rights reserved.
     </div>
   </footer>
 
