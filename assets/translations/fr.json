@@ -11,57 +11,22 @@
   "nav_contact": "Contact",
 
   "hero1_title": "LMHI Canada",
-  "hero1_text": "Promouvoir l'excellence en médecine homéopathique à travers le Canada.",
+  "hero1_text": "Promouvoir l’excellence en médecine homéopathique à travers le Canada.",
   "hero1_btn": "En savoir plus",
 
   "hero2_title": "Collaboration Internationale",
-  "hero2_text": "Relier les praticiens canadiens à la LMHI dans le monde entier.",
-  "hero2_btn": "Adhérez",
+  "hero2_text": "Relier les praticiens canadiens à la LMHI mondiale.",
+  "hero2_btn": "Rejoignez-nous",
 
   "chapter_welcome": "LA SECTION CANADIENNE VOUS SOUHAITE LA BIENVENUE",
   "lmhi_title": "Liga Medicorum Homoeopathica Internationalis (LMHI)",
   "lmhi_sub": "La LMHI s’efforce depuis toujours de promouvoir les meilleures pratiques homéopathiques dans le monde grâce à l’interaction et au partage des connaissances.",
-  "lmhi_body": "La société médicale homéopathique internationale Liga Medicorum Homoeopathica Internationalis (LMHI), fondée à Rotterdam en 1925, représente des médecins homéopathes dans plus de 70 pays. L’objectif de l’association est le développement et la protection de l’homéopathie dans le monde, ainsi que la création de liens entre les homéopathes agréés, les détenteurs de diplômes médicaux, les sociétés et les personnes intéressées par l’homéopathie."
+  "lmhi_body": "La société médicale homéopathique internationale Liga Medicorum Homoeopathica Internationalis (LMHI), fondée à Rotterdam en 1925, représente des médecins homéopathes dans plus de 70 pays. L’objectif de l’association est le développement et la protection de l’homéopathie dans le monde, ainsi que la création de liens entre les homéopathes agréés, les détenteurs de diplômes médicaux, les sociétés et les personnes intéressées par l’homéopathie.",
 
   "stat_members": "Membres Canadiens",
-  "stat_years": "Années de la LMHI",
-  "stat_events": "Événements Annuels",
-  "stat_countries": "Pays Partenaires",
-
-  "announcements_title": "Annonces",
-  "ann1": "Congrès annuel de la LMHI Canada – Inscriptions ouvertes",
-  "ann2": "Nouvelles ressources en langue française disponibles",
-  "ann3": "Appel à communications : Recherche en homéopathie 2026",
-
-  "about_title": "À propos de la LMHI Canada",
-  "about_text": "LMHI Canada représente la section canadienne de la Liga Medicorum Homoeopathica Internationalis, dédiée à l'avancement de l'éducation, de la recherche et des normes professionnelles en homéopathie au Canada.",
-
-  "membership_title": "Adhésion",
-  "member_pro": "Membre Professionnel",
-  "member_pro_text": "Pour les praticiens agréés en médecine homéopathique.",
-  "member_student": "Membre Étudiant",
-  "member_student_text": "Pour les étudiants inscrits dans des programmes accrédités d'homéopathie.",
-  "member_international": "Membre International",
-  "member_international_text": "Pour les membres de la LMHI résidant hors du Canada.",
-  "apply": "Postuler →",
-
-  "events_title": "Événements",
-  "event1": "Congrès annuel de la LMHI Canada",
-  "event2": "Symposium de recherche",
-  "event3": "Conférence internationale de la LMHI",
-
-  "contact_title": "Contactez la LMHI Canada",
-  "contact_text": "Secrétariat de la LMHI Canada\nToronto, Ontario, Canada\nCourriel : info@lmhicanada.org",
-
-  "quicklinks_title": "Liens rapides",
-  "ql_membership": "Adhésion",
-  "ql_events": "Événements",
-  "ql_research": "Recherche",
-  "ql_privacy": "Politique de confidentialité",
-
-  "visitor_title": "Informations visiteurs",
-  "visitor_total": "Total des visiteurs :",
-  "visitor_updated": "Dernière mise à jour :"
+  "stat_years": "Années de la LMHI dans le monde",
+  "stat_events": "Événements annuels",
+  "stat_countries": "Pays partenaires",
 
   "info_history": "Histoire",
   "info_history_text": "L’homéopathie a été introduite au Canada au XIXe siècle par des médecins européens et des immigrants. Au fil du temps, elle a gagné en reconnaissance grâce aux praticiens dévoués, aux établissements d’enseignement et à l’intérêt croissant du public pour la médecine holistique.",
@@ -76,6 +41,40 @@
   "info_practice_text": "L’homéopathie est largement pratiquée au Canada par des professionnels agréés. De nombreux Canadiens recherchent des soins homéopathiques comme approche complémentaire ou alternative à la médecine conventionnelle.",
 
   "info_research": "Recherche & Développement",
-  "info_research_text": "Les chercheurs et institutions canadiennes contribuent à la recherche homéopathique mondiale, explorant les résultats cliniques, l’efficacité des remèdes et les modèles de soins intégratifs."
+  "info_research_text": "Les chercheurs et institutions canadiennes contribuent à la recherche homéopathique mondiale, explorant les résultats cliniques, l’efficacité des remèdes et les modèles de soins intégratifs.",
 
+  "announcements_title": "Annonces",
+  "ann1": "Congrès annuel LMHI Canada – Inscriptions ouvertes",
+  "ann2": "Nouvelles ressources en français disponibles",
+  "ann3": "Appel à communications : Recherche en homéopathie 2026",
+
+  "about_title": "À propos de LMHI Canada",
+  "about_text": "LMHI Canada représente la section canadienne de la Liga Medicorum Homoeopathica Internationalis, dédiée à l’avancement de l’éducation, de la recherche et des normes professionnelles en homéopathie au Canada.",
+
+  "membership_title": "Adhésion",
+  "member_pro": "Membre Professionnel",
+  "member_pro_text": "Pour les praticiens agréés en médecine homéopathique.",
+  "member_student": "Membre Étudiant",
+  "member_student_text": "Pour les étudiants inscrits dans des programmes accrédités en homéopathie.",
+  "member_international": "Membre International",
+  "member_international_text": "Pour les membres de la LMHI résidant hors du Canada.",
+  "apply": "Postuler →",
+
+  "events_title": "Événements",
+  "event1": "Congrès annuel LMHI Canada",
+  "event2": "Symposium de recherche",
+  "event3": "Conférence internationale LMHI",
+
+  "contact_title": "Contact LMHI Canada",
+  "contact_text": "Secrétariat LMHI Canada\nToronto, Ontario, Canada\nCourriel : info@lmhicanada.org",
+
+  "quicklinks_title": "Liens rapides",
+  "ql_membership": "Adhésion",
+  "ql_events": "Événements",
+  "ql_research": "Recherche",
+  "ql_privacy": "Politique de confidentialité",
+
+  "visitor_title": "Infos visiteurs",
+  "visitor_total": "Total des visiteurs :",
+  "visitor_updated": "Dernière mise à jour :"
 }
