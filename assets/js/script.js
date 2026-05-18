@@ -1,201 +1,124 @@
-/* -------------------------------------------------
-   LANGUAGE LOADING
-------------------------------------------------- */
-let currentLanguage = "en";
-
-async function loadLanguage(lang) {
-  currentLanguage = lang;
-
-  try {
-    const response = await fetch(`assets/translations/${lang}.json`);
-    const translations = await response.json();
-
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-      const key = el.getAttribute("data-i18n");
-      if (translations[key] !== undefined) {
-        el.textContent = translations[key];
-      }
-    });
-
-    // Auto-hide paragraph 2 if empty
-    const p2 = document.getElementById("info-text-2");
-    if (p2 && p2.textContent.trim() === "") {
-      p2.style.display = "none";
-    } else if (p2) {
-      p2.style.display = "block";
-    }
-
-  } catch (err) {
-    console.error("Translation load error:", err);
-  }
-}
-
-window.addEventListener("DOMContentLoaded", () => {
-  loadLanguage("en");
-});
-
-document.querySelectorAll(".lang-btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    loadLanguage(btn.dataset.lang);
-  });
-});
-
-
-/* -------------------------------------------------
-   MOBILE NAV
-------------------------------------------------- */
+/* ============================
+   MOBILE NAVIGATION
+============================ */
 const navToggle = document.getElementById("navToggle");
 const navMenu = document.getElementById("navMenu");
 
-navToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("open");
-});
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
+  });
+}
 
-
-/* -------------------------------------------------
+/* ============================
    HERO SLIDER
-------------------------------------------------- */
-const slides = document.querySelectorAll(".hero-slide");
-const prevBtn = document.querySelector(".hero-prev");
-const nextBtn = document.querySelector(".hero-next");
+============================ */
 let currentSlide = 0;
+const slides = document.querySelectorAll(".hero-slide");
+const nextBtn = document.querySelector(".hero-next");
+const prevBtn = document.querySelector(".hero-prev");
 
 function showSlide(index) {
-  slides.forEach((s, i) => s.classList.toggle("active", i === index));
+  slides.forEach((slide, i) => {
+    slide.classList.toggle("active", i === index);
+  });
 }
 
-function nextSlide() {
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
+if (nextBtn && prevBtn) {
+  nextBtn.addEventListener("click", () => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  });
+
+  prevBtn.addEventListener("click", () => {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  });
 }
 
-function prevSlideFn() {
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-  showSlide(currentSlide);
-}
-
-prevBtn.addEventListener("click", prevSlideFn);
-nextBtn.addEventListener("click", nextSlide);
-setInterval(nextSlide, 8000);
-
-
-/* -------------------------------------------------
+/* ============================
    COUNTERS
-------------------------------------------------- */
+============================ */
 const counters = document.querySelectorAll(".counter");
-let countersStarted = false;
 
 function animateCounters() {
   counters.forEach(counter => {
     const target = +counter.dataset.target;
-    const step = Math.max(1, Math.floor(target / 200));
+    let count = 0;
+    const speed = target / 80;
 
-    function update() {
-      let current = +counter.innerText.replace(/,/g, "") || 0;
-      if (current < target) {
-        current += step;
-        if (current > target) current = target;
-        counter.innerText = current.toLocaleString();
+    const update = () => {
+      count += speed;
+      if (count < target) {
+        counter.textContent = Math.floor(count);
         requestAnimationFrame(update);
+      } else {
+        counter.textContent = target;
       }
-    }
+    };
+
     update();
   });
 }
 
-function onScroll() {
-  const statsSection = document.querySelector(".stats");
-  if (!statsSection || countersStarted) return;
+animateCounters();
 
-  const rect = statsSection.getBoundingClientRect();
-  if (rect.top < window.innerHeight && rect.bottom >= 0) {
-    countersStarted = true;
-    animateCounters();
-    window.removeEventListener("scroll", onScroll);
-  }
+/* ============================
+   LANGUAGE LOADER
+============================ */
+let currentLanguage = "en";
+
+function loadLanguage(lang) {
+  fetch(`assets/lang/${lang}.json`)
+    .then(res => res.json())
+    .then(data => {
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (data[key] !== undefined) {
+          el.innerHTML = data[key];
+        }
+      });
+    })
+    .catch(err => console.error("Language load error:", err));
 }
 
-window.addEventListener("scroll", onScroll);
-window.addEventListener("load", onScroll);
+document.querySelectorAll(".lang-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    currentLanguage = btn.dataset.lang;
+    loadLanguage(currentLanguage);
+  });
+});
 
-/* Calculate LMHI years since Sept 10, 1975 */
-function calculateLMHIYears() {
-  const startDate = new Date("1925-09-10");
-  const today = new Date();
+loadLanguage(currentLanguage);
 
-  let years = today.getFullYear() - startDate.getFullYear();
-
-  // Adjust if today's date is before Sept 10 this year
-  const hasHadAnniversary =
-    today.getMonth() > 8 || (today.getMonth() === 8 && today.getDate() >= 10);
-
-  if (!hasHadAnniversary) {
-    years -= 1;
-  }
-
-  return years;
-}
-
-/* Apply dynamic value to the counter */
-const lmhiYearsElement = document.getElementById("lmhi-years");
-if (lmhiYearsElement) {
-  lmhiYearsElement.dataset.target = calculateLMHIYears();
-}
-
-/* -------------------------------------------------
-   INTERACTABLE LMHI INFO SECTION (FIXED)
-------------------------------------------------- */
-
-const menuItems = document.querySelectorAll(".info-menu li");
+/* ============================
+   INTERACTIVE LMHI INFO SECTION
+============================ */
+const infoMenuItems = document.querySelectorAll(".info-menu li");
 const infoTitle = document.getElementById("info-title");
 const infoText1 = document.getElementById("info-text-1");
 const infoText2 = document.getElementById("info-text-2");
 const infoImg = document.getElementById("info-img");
 
-/* NEW: Correct scroll container */
-const infoTextWrapper = document.querySelector(".info-text-scroll");
+function updateInfoSection(section) {
+  infoTitle.setAttribute("data-i18n", `info_${section}`);
+  infoText1.setAttribute("data-i18n", `info_${section}_text`);
+  infoText2.setAttribute("data-i18n", `info_${section}_text2`);
 
-const infoImages = {
-  history: "assets/images/info/history.jpg",
-  education: "assets/images/info/education.jpg",
-  legislation: "assets/images/info/legislation.jpg",
-  practice: "assets/images/info/practice.jpg",
-  research: "assets/images/info/research.jpg"
-};
+  infoImg.src = `assets/images/info/${section}.jpg`;
 
-menuItems.forEach(item => {
+  loadLanguage(currentLanguage);
+}
+
+infoMenuItems.forEach(item => {
   item.addEventListener("click", () => {
-
-    /* Highlight active */
-    menuItems.forEach(i => i.classList.remove("active"));
+    infoMenuItems.forEach(i => i.classList.remove("active"));
     item.classList.add("active");
 
     const section = item.dataset.section;
-
-    /* Update translation keys */
-    infoTitle.setAttribute("data-i18n", `info_${section}`);
-    infoText1.setAttribute("data-i18n", `info_${section}_text`);
-    infoText2.setAttribute("data-i18n", `info_${section}_text2`);
-
-    /* Update image */
-    infoImg.src = infoImages[section];
-
-    /* Reload language */
-    loadLanguage(currentLanguage);
-
-    /* Reset scroll to top */
-    infoTextWrapper.scrollTop = 0;
-
-    /* ---------------------------
-       FADE-IN ANIMATION
-    ----------------------------*/
-    infoTextWrapper.classList.remove("fade");
-    infoImg.classList.remove("fade");
-
-    void infoTextWrapper.offsetWidth;
-    void infoImg.offsetWidth;
-
-    infoTextWrapper.classList.add("fade");
-    infoImg.classList.add("fade");
+    updateInfoSection(section);
   });
 });
+
+/* Load default section */
+updateInfoSection("history");
