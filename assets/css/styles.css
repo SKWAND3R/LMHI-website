@@ -371,6 +371,18 @@ body {
   box-shadow: var(--shadow-soft);
 }
 
+.toronto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.toronto-grid img {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: var(--shadow-soft);
+}
+
 /* ——— FOOTER ——— */
 .footer {
   background: #111827;
