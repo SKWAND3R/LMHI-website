@@ -108,10 +108,17 @@ body {
 
 /* ——— HERO ——— */
 .hero {
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  background: url("assets/images/toronto/skyline.jpg") center/cover no-repeat;
   color: #fff;
-  padding: 3rem 0;
+  padding: 4rem 0;
   position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,0,0,0.65), rgba(179,0,0,0.65));
 }
 
 .hero-slide {
