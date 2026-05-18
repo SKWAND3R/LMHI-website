@@ -424,6 +424,21 @@ body {
 }
 
 /* ——— CONTACT PAGE ——— */
+.contact-hero {
+  background: url("assets/images/toronto/harbourfront.jpg") center/cover no-repeat;
+  padding: 4rem 0;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.contact-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
 .contact-page {
   padding: 60px 0;
 }
