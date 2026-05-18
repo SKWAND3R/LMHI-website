@@ -1,4 +1,4 @@
-/* ——— ROOT ——— */
+/* ROOT */
 :root {
   --primary: #FF0000;
   --primary-dark: #B30000;
@@ -27,14 +27,14 @@ body {
   background: #fff;
 }
 
-/* ——— LAYOUT ——— */
+/* LAYOUT */
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-/* ——— TOP BAR ——— */
+/* TOP BAR */
 .top-bar {
   background: var(--primary-dark);
   color: #fff;
@@ -57,7 +57,7 @@ body {
   cursor: pointer;
 }
 
-/* ——— HEADER ——— */
+/* HEADER */
 .main-header {
   background: #fff;
   border-bottom: 1px solid var(--border);
@@ -81,7 +81,7 @@ body {
   border-radius: 50%;
 }
 
-/* ——— NAV ——— */
+/* NAV */
 .nav-toggle {
   display: none;
   background: none;
@@ -106,23 +106,27 @@ body {
   border-color: var(--primary);
 }
 
-/* ——— HERO ——— */
+/* HERO (Toronto images) */
 .hero {
-  background: url("assets/images/toronto/skyline.jpg") center/cover no-repeat;
-  color: #fff;
-  padding: 4rem 0;
   position: relative;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(255,0,0,0.65), rgba(179,0,0,0.65));
+  color: #fff;
+  padding: 0;
+  overflow: hidden;
 }
 
 .hero-slide {
   display: none;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 5rem 0;
+}
+
+.hero-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,0,0,0.55), rgba(179,0,0,0.55));
 }
 
 .hero-slide.active {
@@ -138,7 +142,7 @@ body {
   cursor: pointer;
 }
 
-/* ——— LMHI INTRO ——— */
+/* LMHI INTRO */
 .lmhi-intro {
   padding: 3rem 0;
   text-align: center;
@@ -181,7 +185,7 @@ body {
   line-height: 1.6;
 }
 
-/* ——— STATS ——— */
+/* STATS */
 .stats {
   background: var(--bg-light);
   padding: 2rem 0;
@@ -201,7 +205,7 @@ body {
   box-shadow: var(--shadow-soft);
 }
 
-/* ——— INTERACTIVE LMHI SECTION ——— */
+/* LMHI INTERACTIVE */
 .lmhi-info {
   padding: 3rem 0;
 }
@@ -212,7 +216,6 @@ body {
   gap: 2rem;
 }
 
-/* Left menu */
 .info-menu {
   list-style: none;
   padding: 0;
@@ -238,7 +241,6 @@ body {
   font-weight: 700;
 }
 
-/* Right content panel */
 .info-content {
   display: grid;
   grid-template-columns: 1fr 360px;
@@ -246,255 +248,11 @@ body {
   align-items: stretch;
 }
 
-/* Scrollable text container */
 .info-text-scroll {
   max-height: 520px;
   overflow-y: auto;
   padding-right: 12px;
   scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
 }
 
-/* Text styling */
-.info-content h3 {
-  margin-top: 0;
-  color: var(--primary-dark);
-  font-size: 1.4rem;
-}
-
-.info-content p {
-  line-height: 1.6;
-  color: #333;
-}
-
-/* Image styling */
-.info-image {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.info-image img {
-  width: 100%;
-  height: auto;
-  max-width: 420px;
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-/* ——— FADE ANIMATION (NEW) ——— */
-.fade-in {
-  opacity: 0;
-  transform: translateY(6px);
-  animation: fadeLMHI 0.35s ease forwards;
-}
-
-@keyframes fadeLMHI {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive LMHI */
-@media (max-width: 900px) {
-  .info-content {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .info-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .info-menu {
-    border-right: none;
-    border-bottom: 2px solid #eee;
-    display: flex;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  .info-menu li {
-    flex-shrink: 0;
-    padding: 0.8rem 1rem;
-  }
-
-  .info-text-scroll {
-    max-height: 380px;
-  }
-}
-
-/* ——— ANNOUNCEMENTS ——— */
-.ticker {
-  margin-top: 1rem;
-  border: 1px solid var(--border);
-  overflow: hidden;
-}
-
-.ticker-inner {
-  display: inline-block;
-  white-space: nowrap;
-  animation: ticker 15s linear infinite;
-}
-
-.ticker-inner span {
-  padding: 0.5rem 1.5rem;
-  display: inline-block;
-}
-
-@keyframes ticker {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* ——— CONTENT ——— */
-.content-section {
-  padding: 2.5rem 0;
-}
-
-.content-section.alt {
-  background: var(--bg-light);
-}
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-}
-
-.card {
-  background: #fff;
-  padding: 1rem;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-soft);
-}
-
-.toronto-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1rem;
-}
-
-.toronto-grid img {
-  width: 100%;
-  border-radius: 6px;
-  box-shadow: var(--shadow-soft);
-}
-
-/* ——— FOOTER ——— */
-.footer {
-  background: #111827;
-  color: #e5e7eb;
-  padding-top: 2rem;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-}
-
-.footer-bottom {
-  border-top: 1px solid #374151;
-  padding: 0.75rem;
-  text-align: center;
-}
-
-.footer-bottom::before {
-  content: "🍁 ";
-  color: var(--accent);
-}
-
-/* ——— RESPONSIVE NAV ——— */
-@media (max-width: 768px) {
-  .nav-toggle { display: block; }
-  .nav ul {
-    display: none;
-    flex-direction: column;
-    background: #fff;
-    padding: 1rem;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    box-shadow: var(--shadow-soft);
-  }
-  .nav ul.open { display: flex; }
-}
-
-/* ——— CONTACT PAGE ——— */
-.contact-hero {
-  background: url("assets/images/toronto/harbourfront.jpg") center/cover no-repeat;
-  padding: 4rem 0;
-  color: white;
-  text-align: center;
-  position: relative;
-}
-
-.contact-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
-}
-
-.contact-page {
-  padding: 60px 0;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-}
-
-.contact-form h2,
-.contact-info h2 {
-  margin-bottom: 20px;
-  color: var(--primary);
-}
-
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-.contact-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  margin-bottom: 22px;
-}
-
-.contact-item i {
-  font-size: 1.6rem;
-  color: var(--primary);
-  margin-top: 4px;
-}
-
-@media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ——— ANIMATIONS ——— */
-@keyframes pop {
-  0% { transform: scale(0.6); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-.content-section h2 {
-  animation: pop 0.4s ease-out;
-}
+.info-content
