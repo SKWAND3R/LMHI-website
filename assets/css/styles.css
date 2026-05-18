@@ -242,17 +242,10 @@ body {
 /* Scrollable text container */
 .info-text-scroll {
   max-height: 520px;
-  min-height: 520px;
   overflow-y: auto;
   padding-right: 12px;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-}
-
-/* Remove clipping */
-.info-content > div {
-  overflow: visible !important;
-  height: auto !important;
 }
 
 /* Text styling */
@@ -282,14 +275,14 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* Fade-in animation */
-.fade {
+/* ——— FADE ANIMATION (NEW) ——— */
+.fade-in {
   opacity: 0;
   transform: translateY(6px);
-  animation: fadeIn 0.35s ease forwards;
+  animation: fadeLMHI 0.35s ease forwards;
 }
 
-@keyframes fadeIn {
+@keyframes fadeLMHI {
   to {
     opacity: 1;
     transform: translateY(0);
@@ -319,6 +312,10 @@ body {
   .info-menu li {
     flex-shrink: 0;
     padding: 0.8rem 1rem;
+  }
+
+  .info-text-scroll {
+    max-height: 380px;
   }
 }
 
