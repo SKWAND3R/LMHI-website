@@ -120,5 +120,34 @@ infoMenuItems.forEach(item => {
   });
 });
 
+function updateInfoSection(section) {
+  // Update translation keys
+  infoTitle.setAttribute("data-i18n", `info_${section}`);
+  infoText1.setAttribute("data-i18n", `info_${section}_text`);
+  infoText2.setAttribute("data-i18n", `info_${section}_text2`);
+
+  // Update image
+  infoImg.src = `assets/images/info/${section}.jpg`;
+
+  // Remove old fade classes
+  infoTitle.classList.remove("fade-in");
+  infoText1.classList.remove("fade-in");
+  infoText2.classList.remove("fade-in");
+  infoImg.classList.remove("fade-in");
+
+  // Force reflow so animation restarts
+  void infoTitle.offsetWidth;
+
+  // Add fade classes
+  infoTitle.classList.add("fade-in");
+  infoText1.classList.add("fade-in");
+  infoText2.classList.add("fade-in");
+  infoImg.classList.add("fade-in");
+
+  // Reload language
+  loadLanguage(currentLanguage);
+}
+
+
 /* Load default section */
 updateInfoSection("history");
