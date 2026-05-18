@@ -101,26 +101,6 @@ const infoText2 = document.getElementById("info-text-2");
 const infoImg = document.getElementById("info-img");
 
 function updateInfoSection(section) {
-  infoTitle.setAttribute("data-i18n", `info_${section}`);
-  infoText1.setAttribute("data-i18n", `info_${section}_text`);
-  infoText2.setAttribute("data-i18n", `info_${section}_text2`);
-
-  infoImg.src = `assets/images/info/${section}.jpg`;
-
-  loadLanguage(currentLanguage);
-}
-
-infoMenuItems.forEach(item => {
-  item.addEventListener("click", () => {
-    infoMenuItems.forEach(i => i.classList.remove("active"));
-    item.classList.add("active");
-
-    const section = item.dataset.section;
-    updateInfoSection(section);
-  });
-});
-
-function updateInfoSection(section) {
   // Update translation keys
   infoTitle.setAttribute("data-i18n", `info_${section}`);
   infoText1.setAttribute("data-i18n", `info_${section}_text`);
@@ -148,6 +128,15 @@ function updateInfoSection(section) {
   loadLanguage(currentLanguage);
 }
 
+infoMenuItems.forEach(item => {
+  item.addEventListener("click", () => {
+    infoMenuItems.forEach(i => i.classList.remove("active"));
+    item.classList.add("active");
+
+    const section = item.dataset.section;
+    updateInfoSection(section);
+  });
+});
 
 /* Load default section */
 updateInfoSection("history");
